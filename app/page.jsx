@@ -2,8 +2,8 @@ import Wrapper from "@/components/layout/Wrapper";
 import MainHome from "../app/(homes)/home_10/page";
 
 export const metadata = {
-  title: "Home-1 || GoTrip - Travel & Tour React NextJS Template",
-  description: "GoTrip - Travel & Tour React NextJS Template",
+  title: "Synergy",
+  description: "Synergy - Resource allocator mapper for efficient transaction",
 };
 
 export default function Home() {

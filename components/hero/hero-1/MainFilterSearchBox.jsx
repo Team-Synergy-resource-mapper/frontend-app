@@ -2,7 +2,7 @@
 'use client'
 
 import { useSelector, useDispatch } from "react-redux";
-import { addCurrentTab } from "../../../features/hero/findPlaceSlice";
+import { addCurrentTab } from "../../../store/reducers/ui/findPlaceSlice";
 import DateSearch from "../DateSearch";
 import GuestSearch from "./GuestSearch";
 import LocationSearch from "./LocationSearch";

@@ -12,6 +12,7 @@ export const hotelsData = [
     delayAnimation: "100",
     city: "new_york",
     category: "hotel",
+    rating:2
   },
   {
     id: 2,
@@ -26,11 +27,12 @@ export const hotelsData = [
     delayAnimation: "200",
     city: "london",
     category: "tour",
+    rating:3
   },
   {
     id: 3,
     tag: "best seller",
-    slideImg: ["/img/hotels/3.png"],
+    slideImg: ["/img/hotels/2.png", "/img/hotels/1.png", "/img/hotels/3.png"],
     img: "/img/hotels/3.png",
     title: "The Westin New York at Times Square West",
     location: "Manhattan, New York",
@@ -40,6 +42,7 @@ export const hotelsData = [
     delayAnimation: "300",
     city: "new_york",
     category: "activity",
+    rating:3
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ export const hotelsData = [
     delayAnimation: "400",
     city: "new_york",
     category: "cruise",
+    rating:3
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ export const hotelsData = [
     delayAnimation: "500",
     city: "london",
     category: "holiday_rentals",
+    rating:3
   },
   {
     id: 6,
@@ -82,6 +87,7 @@ export const hotelsData = [
     delayAnimation: "600",
     city: "new_york",
     category: "hotel",
+    rating:3
   },
   {
     id: 7,
@@ -96,6 +102,7 @@ export const hotelsData = [
     delayAnimation: "700",
     city: "new_york",
     category: "holiday_rentals",
+    rating:3
   },
   {
     id: 8,
@@ -110,6 +117,7 @@ export const hotelsData = [
     delayAnimation: "800",
     city: "london",
     category: "flights",
+    rating:3
   },
   {
     id: 9,
@@ -124,6 +132,7 @@ export const hotelsData = [
     delayAnimation: "900",
     city: "new_york",
     category: "car",
+    rating:2
   },
   {
     id: 10,
@@ -142,6 +151,7 @@ export const hotelsData = [
     delayAnimation: "1000",
     city: "paris",
     category: "hotel",
+    rating:3
   },
   {
     id: 11,
@@ -156,6 +166,7 @@ export const hotelsData = [
     delayAnimation: "1100",
     city: "new_york",
     category: "hotel",
+    rating:3
   },
   {
     id: 12,
@@ -170,6 +181,7 @@ export const hotelsData = [
     delayAnimation: "1200",
     city: "paris",
     category: "hotel",
+    rating:3
   },
   {
     id: 13,
@@ -184,6 +196,7 @@ export const hotelsData = [
     delayAnimation: "500",
     city: "new_york",
     category: "hotel",
+    rating:3
   },
   {
     id: 14,
@@ -198,6 +211,7 @@ export const hotelsData = [
     delayAnimation: "600",
     city: "istanbul",
     category: "tour",
+    rating:3
   },
   {
     id: 15,
@@ -212,6 +226,7 @@ export const hotelsData = [
     delayAnimation: "700",
     city: "istanbul",
     category: "hotel",
+    rating:3
   },
   {
     id: 16,
@@ -226,5 +241,6 @@ export const hotelsData = [
     delayAnimation: "800",
     city: "new_york",
     category: "hotel",
+    rating:3
   },
 ];

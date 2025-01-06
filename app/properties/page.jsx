@@ -3,7 +3,7 @@ import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
 import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v1/MainFilterSearchBox";
 import TopHeaderFilter from "@/components/hotel-list/hotel-list-v1/TopHeaderFilter";
-import HotelProperties from "@/components/hotel-list/hotel-list-v1/HotelProperties";
+import HotelProperties from "@/components/properties/Properties";
 import Pagination from "@/components/hotel-list/common/Pagination";
 import Sidebar from "@/components/properties/Sidebar";
 
@@ -55,7 +55,7 @@ const index = () => {
               >
                 <div className="offcanvas-header">
                   <h5 className="offcanvas-title" id="offcanvasLabel">
-                    Filter Hotels
+                    Filter
                   </h5>
                   <button
                     type="button"

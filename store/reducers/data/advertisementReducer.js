@@ -12,13 +12,14 @@ import { dispatch } from '../../store';
 const initialState = {
   error: null,
   success: null,
-  properties: [],
-  property: null,
-  isLoading: false
+  advertisements: [],
+  advertisement: null,
+  isLoading: false,
+  settedAdvertisement:null
 };
 
 const slice = createSlice({
-  name: 'properties',
+  name: 'advertisements',
   initialState,
   reducers: {
     // TO INITIAL STATE
@@ -41,38 +42,41 @@ const slice = createSlice({
       state.isLoading = false;
     },
 
-    // POST property
-    addpropertySuccess(state, action) {
-      state.property.push(action.payload);
-      state.success = "property created successfully."
+    // POST advertisement
+    addAdvertisementsuccess(state, action) {
+      state.advertisement.push(action.payload);
+      state.success = "advertisement created successfully."
     },
 
-    // GET property
-    fetchpropertySuccess(state, action) {
-      state.property = action.payload;
+    // GET advertisement
+    fetchAdvertisementsuccess(state, action) {
+      state.advertisement = action.payload;
       state.success = null
     },
 
-    // GET ALL property
-    fetchPropertiesSuccess(state, action) {
-      state.properties = action.payload;
+    // GET ALL advertisement
+    fetchAdvertisementsSuccess(state, action) {
+      state.advertisements = action.payload;
       state.success = null
     },
 
-    // UPDATE property
-    updatepropertySuccess(state, action) {
-      const updatedpropertyIndex = state.propertys.findIndex(property => property.id === action.payload.id);
-      if (updatedpropertyIndex !== -1) {
-        state.propertys[updatedpropertyIndex] = action.payload;
+    // UPDATE advertisement
+    updateAdvertisementsuccess(state, action) {
+      const updatedadvertisementIndex = state.advertisements.findIndex(advertisement => advertisement.id === action.payload.id);
+      if (updatedadvertisementIndex !== -1) {
+        state.advertisements[updatedadvertisementIndex] = action.payload;
       }
-      state.success = "property updated successfully."
+      state.success = "advertisement updated successfully."
     },
 
-    // DELETE property
-    deletepropertySuccess(state, action) {
-      state.propertys = state.propertys.filter(property => property.id !== action.payload);
-      state.success = "property deleted successfully."
+    // DELETE advertisement
+    deleteAdvertisementsuccess(state, action) {
+      state.advertisements = state.advertisements.filter(advertisement => advertisement.id !== action.payload);
+      state.success = "advertisement deleted successfully."
     },
+    setAdvertisementsuccess(state, action){
+      state.settedadvertisement = action.payload 
+    }
 
   }
 });
@@ -93,17 +97,17 @@ export function toInitialState() {
 }
 
 /**
- * POST property
- * @param newproperty 
+ * POST ADVERTISEMENT
+ * @param newAdvertisement 
  * @returns 
  */
-export function addproperty(newproperty) {
+export function addAdvertisement(newadvertisement) {
   return async () => {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.post('/propertys', newproperty);
-      dispatch(slice.actions.addpropertySuccess(response.data));
+      const response = await axiosServices.post('/advertisements', newadvertisement);
+      dispatch(slice.actions.addAdvertisementsuccess(response.data));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -113,17 +117,17 @@ export function addproperty(newproperty) {
 }
 
 /**
- * GET property
+ * GET ADVERTISEMENT
  * @param id 
  * @returns 
  */
-export function fetchproperty(id) {
+export function fetchAdvertisement(id) {
   return async () => {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.get(`/propertys/${id}`);
-      dispatch(slice.actions.fetchpropertySuccess(response.data));
+      const response = await axiosServices.get(`/advertisements/${id}`);
+      dispatch(slice.actions.fetchAdvertisementsuccess(response.data));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -133,16 +137,15 @@ export function fetchproperty(id) {
 }
 
 /**
- * GET ALL property
+ * GET ALL ADVERTISEMENT
  * @param queryParams 
  * @returns 
  */
-export function fetchproperties(queryParams) {
+export function fetchAdvertisements(queryParams) {
   return async () => {
     dispatch(slice.actions.startLoading());
-
     try {
-      // const response = await axiosServices.get('/propertys', { params: queryParams });
+      // const response = await axiosServices.get('/advertisements', { params: queryParams });
       const response = [
         // Vehicle
         {
@@ -154,7 +157,7 @@ export function fetchproperties(queryParams) {
           used: false,
           condition: "buy",
           price: "5000",
-          ratings: 3,
+          ratings: "4.5",
           img: "/img/hotels/1.png",
           numberOfReviews: "128",
           slideImg: ["/img/hotels/1.png"],
@@ -449,9 +452,9 @@ export function fetchproperties(queryParams) {
           slideImg: ["/img/hotels/1.png"],
           delayAnimation: "2000",
         },
-      ];
+      ];      
       
-      dispatch(slice.actions.fetchPropertiesSuccess(response));
+      dispatch(slice.actions.fetchAdvertisementsSuccess(response));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -461,17 +464,17 @@ export function fetchproperties(queryParams) {
 }
 
 /**
- * UPDATE property
- * @param updatedproperty
+ * UPDATE ADVERTISEMENT
+ * @param updatedadvertisement
  * @returns 
  */
-export function updatedproperty(updatedproperty) {
+export function updatedAdvertisement(updatedadvertisement) {
   return async () => {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.put(`/propertys/${updatedproperty.id}`, updatedproperty);
-      dispatch(slice.actions.updatepropertySuccess(response.data));
+      const response = await axiosServices.put(`/advertisements/${updatedadvertisement.id}`, updatedadvertisement);
+      dispatch(slice.actions.updateAdvertisementsuccess(response.data));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -481,17 +484,37 @@ export function updatedproperty(updatedproperty) {
 }
 
 /**
- * DELETE property
- * @param propertyId 
+ * DELETE ADVERTISEMENT
+ * @param advertisementId 
  * @returns 
  */
-export function deleteproperty(propertyId) {
+export function deleteAdvertisement(advertisementId) {
   return async () => {
     dispatch(slice.actions.startLoading());
 
     try {
-      await axiosServices.delete(`/propertys/${propertyId}`);
-      dispatch(slice.actions.deletepropertySuccess(propertyId));
+      await axiosServices.delete(`/advertisements/${advertisementId}`);
+      dispatch(slice.actions.deleteAdvertisementsuccess(advertisementId));
+    } catch (error) {
+      dispatch(slice.actions.hasError(error));
+    } finally {
+      dispatch(slice.actions.finishLoading());
+    }
+  };
+}
+
+
+/**
+ * POST ADVERTISEMENT
+ * @param newadvertisement 
+ * @returns 
+ */
+export function setAdvertisement(setadvertisement) {
+  return async () => {
+    dispatch(slice.actions.startLoading());
+
+    try {
+      dispatch(slice.actions.setAdvertisementsuccess(setadvertisement));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {

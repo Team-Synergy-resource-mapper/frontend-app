@@ -1,6 +1,6 @@
 "use client";
 
-import { hotelsData } from "@/data/hotels";
+import { hotelsData } from "../data/hotels";
 import { Navigation, Pagination } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,35 +11,34 @@ import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // project import
-import { fetchproperties } from "@/store/reducers/data/propertyReducer";
+import { fetchproperties } from "../../store/reducers/data/propertyReducer";
 
 const Properties = () => {
-  const dispatch = useDispatch();
-  const {properties,isLoading} = useSelector(state=>state.property)
   // store state
+  const dispatch = useDispatch();
+  const { properties, isLoading } = useSelector((state) => state.property);
 
   // pre fetching data
-  useEffect(()=>{
+  useEffect(() => {
     const queryParams = {
       PageSize: 20,
       PageNumber: 1,
-      SortBy: 'id',
-      SortOrder: 'asc',
-      SearchKey: '',
-      numberOfPages:2
+      SortBy: "id",
+      SortOrder: "asc",
+      SearchKey: "",
+      numberOfPages: 2,
     };
-    fetchproperties(queryParams)
-  },[dispatch])
-
+    dispatch(fetchproperties(queryParams));
+  }, [dispatch]);
 
   // constants
   const maxRating = 5;
-  if(isLoading){
-    return <h1>Loading ...</h1>
+  if (isLoading) {
+    return <h1>Loading ...</h1>;
   }
   return (
     <>
-      {hotelsData.slice(0, 7).map((item) => (
+      {properties.slice(0, 8).map((item) => (
         <div className="col-12" key={item?.id}>
           <div className="border-top-light pt-30">
             <div className="row x-gap-20 y-gap-20">
@@ -83,35 +82,29 @@ const Properties = () => {
               <div className="col-md">
                 <h3 className="text-18 lh-16 fw-500">
                   {item?.title}
-                  <br className="lg:d-none" /> {item?.location}
+                  <br className="lg:d-none" /> {item?.category}
                   <div className="d-inline-block ml-10">
-                    {[...Array(maxRating)].map((_, index) => (
-                      <i
-                        key={index}
-                        className={`icon-star text-10 ${
-                          index + 0.5 === item.rating
-                            ? "text-yellow-2 half-star" // Half-filled star class
-                            : index < item.rating
-                            ? "text-yellow-2"
-                            : "text-gray-3"
-                        }`}
-                      ></i>
-                    ))}
+                    {[...Array(maxRating)].map((_, index) => {
+                      const numericRating = parseFloat(item.rating); // Convert the string to a number
+                      return (
+                        <i
+                          key={index}
+                          className={`icon-star text-10 ${
+                            numericRating >= index + 1 // Full star
+                              ? "text-yellow-2"
+                              : numericRating > index // Half star
+                              ? "text-yellow-2 half-star"
+                              : "text-gray-3" // Empty star
+                          }`}
+                        ></i>
+                      );
+                    })}
                   </div>
                 </h3>
 
                 <div className="row x-gap-10 y-gap-10 items-center pt-10">
                   <div className="col-auto">
-                    <p className="text-14">{item?.location}</p>
-                  </div>
-
-                  <div className="col-auto">
-                    <button
-                      data-x-click="mapFilter"
-                      className="d-block text-14 text-blue-1 underline"
-                    >
-                      Show on map
-                    </button>
+                    <p className="text-14">{item?.description}</p>
                   </div>
 
                   <div className="col-auto">
@@ -124,7 +117,7 @@ const Properties = () => {
                 </div>
 
                 <div className="text-14 lh-15 mt-20">
-                  <div className="fw-500">King Room</div>
+                  <div className="fw-500">{item.category}</div>
                   <div className="text-light-1">1 extra-large double bed</div>
                 </div>
 
@@ -132,32 +125,6 @@ const Properties = () => {
                   <div className="fw-500">Free cancellation</div>
                   <div className="">
                     You can cancel later, so lock in this great price today.
-                  </div>
-                </div>
-
-                <div className="row x-gap-10 y-gap-10 pt-20">
-                  <div className="col-auto">
-                    <div className="border-light rounded-100 py-5 px-20 text-14 lh-14">
-                      Breakfast
-                    </div>
-                  </div>
-
-                  <div className="col-auto">
-                    <div className="border-light rounded-100 py-5 px-20 text-14 lh-14">
-                      WiFi
-                    </div>
-                  </div>
-
-                  <div className="col-auto">
-                    <div className="border-light rounded-100 py-5 px-20 text-14 lh-14">
-                      Spa
-                    </div>
-                  </div>
-
-                  <div className="col-auto">
-                    <div className="border-light rounded-100 py-5 px-20 text-14 lh-14">
-                      Bar
-                    </div>
                   </div>
                 </div>
               </div>
@@ -168,7 +135,7 @@ const Properties = () => {
                   <div className="col-auto">
                     <div className="text-14 lh-14 fw-500">Exceptional</div>
                     <div className="text-14 lh-14 text-light-1">
-                      3,014 reviews
+                      {item?.numberOfReviews} reviews
                     </div>
                   </div>
                   <div className="col-auto">

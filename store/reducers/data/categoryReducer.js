@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // project imports
-import { axiosServices } from '@/utils/axios/axios';
+import { axiosServices } from "../../../utils/axios/axios";
 import { dispatch } from '../../store';
 
 
@@ -144,11 +144,9 @@ export function fetchCategories() {
     try {
       // const response = await axiosServices.get('/Categorys', { params: queryParams });
       const response = [
-          { label: "Electronics", count: 92 ,checked:false },
-          { label: "Vehicles", count: 45,checked:false  },
-          { label: "Airport Transfer", count: 21,checked:true  },
-          { label: "WiFi Included", count: 78,checked:false  },
-          { label: "5 Star", count: 679, checked:false  },
+          {id:1, label: "Electronics", count: 92, checked:false },
+          {id:2, label: "Vehicles", count: 45, checked:false  },
+          {id:3, label: "Property", count: 21, checked:true  }
         ];
       dispatch(slice.actions.fetchCategoriesSuccess(response));
     } catch (error) {

@@ -13,7 +13,7 @@ const Index = () => {
     {
       label: "Content",
       labelNo: 1,
-      content: <ContentTabContent />,
+      content: <ContentTabContent/>,
     },
     // {
     //   label: "Location",

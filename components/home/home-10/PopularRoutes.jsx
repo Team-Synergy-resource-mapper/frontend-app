@@ -100,7 +100,7 @@ const PopularRoutes = () => {
         {rentalRoutes.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
-              href="/rental-list-v2"
+              href="/properties"
               className="rentalCard -type-2"
               data-aos="fade"
               data-aos-delay={item.delayAnimation}

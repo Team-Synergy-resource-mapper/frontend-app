@@ -195,6 +195,16 @@ const MobileMenu = () => {
               Contact
             </MenuItem>
             {/* End Contact  Menu */}
+            <MenuItem
+             onClick={()=>router.push("/wishlist")}
+             className={
+              pathname === "/wishlist" ? "menu-active-link" : ""
+            }
+             
+            >
+              WishList
+            </MenuItem>
+            {/* End Contact  Menu */}
           </Menu>
         </Sidebar>
 

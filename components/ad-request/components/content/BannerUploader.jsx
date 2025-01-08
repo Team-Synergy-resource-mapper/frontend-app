@@ -3,8 +3,7 @@
 
 import { useState } from "react";
 
-const BannerUploader = () => {
-  const [images, setImages] = useState([]);
+const BannerUploader = ({name, formik}) => {
   const [error, setError] = useState("");
 
   const handleFileUpload = (event) => {
@@ -32,7 +31,7 @@ const BannerUploader = () => {
           } else {
             newImages.push(reader.result);
             if (newImages.length === fileList.length) {
-              setImages([...images, ...newImages]);
+              formik.setFieldValue(name, [...formik.values[name], ...newImages]);
               setError("");
             }
           }
@@ -48,9 +47,9 @@ const BannerUploader = () => {
   };
 
   const handleRemoveImage = (index) => {
-    const newImages = [...images];
+    const newImages = [...formik.values[name]];
     newImages.splice(index, 1);
-    setImages(newImages);
+    formik.setFieldValue(name, newImages);
   };
 
   return (
@@ -67,6 +66,7 @@ const BannerUploader = () => {
             type="file"
             id="bannerUpload"
             multiple
+            name={name}
             accept="image/png, image/jpeg"
             className="d-none"
             onChange={handleFileUpload}
@@ -78,7 +78,7 @@ const BannerUploader = () => {
       </div>
       {/* End uploader field */}
 
-      {images.map((image, index) => (
+      {(formik.values[name] || []).map((image, index) => (
         <div className="col-auto" key={index}>
           <div className="d-flex ratio ratio-1:1 w-200">
             <img src={image} alt="image" className="img-ratio rounded-4" />

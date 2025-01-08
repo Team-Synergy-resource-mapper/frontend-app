@@ -1,11 +1,11 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header11 from "@/components/header/header-11";
-import DefaultFooter from "@/components/footer/default";
-import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/hotel-list/hotel-list-v1/TopHeaderFilter";
-import HotelProperties from "@/components/properties/Properties";
-import Pagination from "@/components/hotel-list/common/Pagination";
-import Sidebar from "@/components/properties/Sidebar";
+import CallToActions from "../../components/common/CallToActions";
+import Header10 from "../../components/header/header-10";
+import DefaultFooter from "../../components/footer/default";
+import MainFilterSearchBox from "../../components/hotel-list/hotel-list-v1/MainFilterSearchBox";
+import TopHeaderFilter from "../../components/hotel-list/hotel-list-v1/TopHeaderFilter";
+import HotelProperties from "../../components/properties/Properties";
+import Pagination from "../../components/hotel-list/common/Pagination";
+import Sidebar from "../../components/properties/Sidebar";
 
 export const metadata = {
   title: "Hotel List v1 || GoTrip - Travel & Tour React NextJS Template",
@@ -20,7 +20,7 @@ const index = () => {
       <div className="header-margin"></div>
       {/* header top margin */}
 
-      <Header11 />
+      <Header10 />
       {/* End Header 1 */}
 
       <section className="pt-40 pb-40 bg-light-2">

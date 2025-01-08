@@ -56,7 +56,7 @@ const Header1 = () => {
                     href="/login"
                     className="button px-30 fw-400 text-14 -blue-1 bg-dark-4 h-50 text-white"
                   >
-                    Become An Expert
+                    Sign In
                   </Link>
                   <Link
                     href="/signup"

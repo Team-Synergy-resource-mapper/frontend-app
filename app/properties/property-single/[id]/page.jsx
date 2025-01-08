@@ -1,20 +1,20 @@
 import dynamic from "next/dynamic";
 import "photoswipe/dist/photoswipe.css";
-import carsData from "@/data/cars";
-import Header11 from "@/components/header/header-11";
-import Overview from "@/components/car-single/Overview";
-import PropertyHighlights from "@/components/car-single/PropertyHighlights";
-import TopBreadCrumb from "@/components/car-single/TopBreadCrumb";
-import ReviewProgress2 from "@/components/car-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/car-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/car-single/ReplyForm";
-import ReplyFormReview2 from "@/components/car-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultFooter from "@/components/footer/default";
-import SlideGallery from "@/components/car-single/SlideGallery";
-import FilterBox from "@/components/car-single/filter-box";
-import Faq from "@/components/faq/Faq";
-import MapPropertyFinder from "@/components/car-single/MapPropertyFinder";
+import carsData from "../../../../data/cars";
+import Header11 from "../../../../components/header/header-11";
+import Overview from "../../../../components/car-single/Overview";
+import PropertyHighlights from "../../../../components/car-single/PropertyHighlights";
+import TopBreadCrumb from "../../../../components/car-single/TopBreadCrumb";
+import ReviewProgress2 from "../../../../components/car-single/guest-reviews/ReviewProgress2";
+import DetailsReview2 from "../../../../components/car-single/guest-reviews/DetailsReview2";
+import ReplyForm from "../../../../components/car-single/ReplyForm";
+import ReplyFormReview2 from "../../../../components/car-single/ReplyFormReview2";
+import CallToActions from "../../../../components/common/CallToActions";
+import DefaultFooter from "../../../../components/footer/default";
+import SlideGallery from "../../../../components/car-single/SlideGallery";
+import FilterBox from "../../../../components/car-single/filter-box";
+import Faq from "../../../../components/faq/Faq";
+import MapPropertyFinder from "../../../../components/car-single/MapPropertyFinder";
 
 export const metadata = {
   title: "Car Single || GoTrip - Travel & Tour React NextJS Template",

@@ -1,38 +1,16 @@
 
 'use client'
 
-import { fetchCategories } from "../../store/reducers/data/categoryReducer";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-const DropdownFilter = ({name, formik}) => {
-  // store
-  const dispatch = useDispatch();
-  const { categories, isLoading } = useSelector((state) => state.category);
-  // manage states
-  const [options, setOptions] = useState([]);
-  
-  // data prefetching
-  useEffect(()=>{
-      dispatch(fetchCategories())
-  },[dispatch])
-
-  // data pre-processing
-  useEffect(()=>{
-    if(categories){
-      const transformData = categories.map(category=>{return category.label});
-      setOptions(transformData);
-    }
-  },[categories])
-
-  // handle events
+const DropDown = ({formik, name}) => {
   const handleItemClick = (option) => {
     formik.setFieldValue(name, option)
   };
 
-  if(isLoading){
-    return <h3>Loading ...</h3>
-  }
+  const options = [
+    "Buy",
+    "Sell"
+  ];
+
   return (
     <div className="dropdown js-dropdown js-services-active">
       <div
@@ -42,7 +20,7 @@ const DropdownFilter = ({name, formik}) => {
         aria-expanded="false"
         data-bs-offset="0,10"
       >
-        <span className="js-dropdown-title">{formik.values[name] || "Select Category"}</span>
+        <span className="js-dropdown-title">{formik.values[name] || "Select Value"}</span>
         <i className="icon icon-chevron-sm-down text-7 ml-10" />
       </div>
       <div className="toggle-element -dropdown  dropdown-menu">
@@ -53,7 +31,7 @@ const DropdownFilter = ({name, formik}) => {
               className={`${
                 formik.values[name] === option ? "text-blue-1" : ""
               } js-dropdown-link`}
-              onClick={() => handleItemClick(option)}
+              onClick={()=>handleItemClick(option)}
             >
               {option}
             </div>
@@ -64,4 +42,4 @@ const DropdownFilter = ({name, formik}) => {
   );
 };
 
-export default DropdownFilter;
+export default DropDown;

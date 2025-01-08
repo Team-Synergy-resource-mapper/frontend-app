@@ -1,15 +1,15 @@
 import dynamic from "next/dynamic";
-import Header10 from "@/components/header/header-10";
-import Hero10 from "@/components/hero/hero-10";
+import Header10 from "../../components/header/header-10";
+import Hero10 from "../../components/hero/hero-10";
 import Link from "next/link";
-import Footer8 from "@/components/footer/footer-8";
-import BlockGuide from "@/components/block/BlockGuide";
-import AppBanner from "@/components/home/home-10/AppBanner";
-import TopDestinations from "@/components/home/home-10/TopDestinations";
-import TestimonialRating from "@/components/home/home-10/TestimonialRating";
-import Testimonial from "@/components/home/home-10/Testimonial";
-import PopularRoutes from "@/components/home/home-10/PopularRoutes";
-import Locations from "@/components/home/home-10/Locations";
+import Footer8 from "../../components/footer/footer-8";
+import BlockGuide from "../../components/block/BlockGuide";
+import AppBanner from "../../components/home/home-10/AppBanner";
+import TopDestinations from "../../components/home/home-10/TopDestinations";
+import TestimonialRating from "../../components/home/home-10/TestimonialRating";
+import Testimonial from "../../components/home/home-10/Testimonial";
+import PopularRoutes from "../../components/home/home-10/PopularRoutes";
+import Locations from "../../components/home/home-10/Locations";
 
 export const metadata = {
   title: "Synergy",
@@ -43,12 +43,12 @@ const home_10 = () => {
             {/* End .col */}
 
             <div className="col-auto">
-              <a
-                href="#"
+              <Link
+                href="/properties"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 More <div className="icon-arrow-top-right ml-15" />
-              </a>
+              </Link>
             </div>
             {/* End .col */}
           </div>
@@ -107,12 +107,12 @@ const home_10 = () => {
             {/* End col-auto */}
 
             <div className="col-auto">
-              <a
-                href="#"
+              <Link
+                href="/properties"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 More <div className="icon-arrow-top-right ml-15" />
-              </a>
+              </Link>
             </div>
             {/* End col-auto */}
           </div>
@@ -160,7 +160,7 @@ const home_10 = () => {
 
             <div className="col-auto">
               <Link
-                href="#"
+                href="/properties"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 More <div className="icon-arrow-top-right ml-15" />

@@ -1,14 +1,40 @@
-import Sidebar from "./common/Sidebar";
-import Header11 from "@/components/header/header-11";
+'use client'
+import React, { useEffect } from "react";
+import Header11 from "../../components/header/header-11";
 import SettingsTabs from "./components/index";
 import Footer from "./common/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchRequests, setRequest } from "../../store/reducers/data/adRequestReducer";
+const index = ({id}) => {
+    // store state
+    const{requests, isLoading} = useSelector(state=>state.request);
+    const dispatch = useDispatch();
 
-const index = () => {
+    // choose exist request 
+    useEffect(() => {
+      const fetchAndSetRequest = async () => {
+        if (!requests) {
+          // Fetch requests if not already loaded
+          await dispatch(fetchRequests());
+        }
+  
+        // Find and set the request based on ID
+        const matchedRequest = requests?.find((req) => req.id === id) || null;
+        dispatch(setRequest(matchedRequest));
+      };
+  
+      fetchAndSetRequest();
+    }, [id, requests, dispatch]);
+    
+  
+    // loading
+    if(isLoading){
+      return <h1>Loading ...</h1>
+    }
   return (
     <>
       {/*  */}
       {/* End Page Title */}
-
       <div className="header-margin"></div>
 
       <Header11 />
@@ -29,7 +55,7 @@ const index = () => {
             </div>
               {/* End text-center */}
               <div className="py-30 px-30 rounded-4 bg-white shadow-3">
-                <SettingsTabs />
+                <SettingsTabs  />
               </div>
               <Footer />
             </div>

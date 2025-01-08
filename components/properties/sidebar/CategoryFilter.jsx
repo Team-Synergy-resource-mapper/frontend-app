@@ -1,6 +1,6 @@
 "use client"
 
-import { fetchCategories } from "@/store/reducers/data/categoryReducer";
+import { fetchCategories } from "../../../store/reducers/data/categoryReducer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 

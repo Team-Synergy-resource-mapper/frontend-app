@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import LoginWithSocial from "@/components/common/LoginWithSocial";
-import LoginForm from "@/components/common/LoginForm";
+import CallToActions from "../../../components/common/CallToActions";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import LoginWithSocial from "../../../components/common/LoginWithSocial";
+import LoginForm from "../../../components/common/LoginForm";
 
 export const metadata = {
   title: "Login || GoTrip - Travel & Tour React NextJS Template",

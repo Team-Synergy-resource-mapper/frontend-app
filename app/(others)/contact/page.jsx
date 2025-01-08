@@ -1,12 +1,12 @@
 import dynamic from "next/dynamic";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import WhyChoose from "@/components/block/BlockGuide";
-import Address from "@/components/block/Address";
-import Social from "@/components/common/social/Social";
-import ContactForm from "@/components/common/ContactForm";
-import LocationTopBar from "@/components/common/LocationTopBar";
+import CallToActions from "../../../components/common/CallToActions";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import WhyChoose from "../../../components/block/BlockGuide";
+import Address from "../../../components/block/Address";
+import Social from "../../../components/common/social/Social";
+import ContactForm from "../../../components/common/ContactForm";
+import LocationTopBar from "../../../components/common/LocationTopBar";
 
 export const metadata = {
   title: "Contact || GoTrip - Travel & Tour React NextJS Template",

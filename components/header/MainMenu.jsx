@@ -18,7 +18,7 @@ import { useState } from "react";
 
 const MainMenu = ({ style = "" }) => {
   const pathname = usePathname();
-  const [isActiveParent, setIsActiveParent] = useState(false)
+  const [isActiveParent, setIsActiveParent] = useState(false);
 
   return (
     <nav className="menu js-navList">
@@ -47,7 +47,13 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End home page menu */}
 
-        <li className={isActiveParent ? "menu-item-has-children -has-mega-menu current":'menu-item-has-children -has-mega-menu'}>
+        <li
+          className={
+            isActiveParent
+              ? "menu-item-has-children -has-mega-menu current"
+              : "menu-item-has-children -has-mega-menu"
+          }
+        >
           <a href="#">
             <span className="mr-10">Categories</span>
             <i className="icon icon-chevron-sm-down" />
@@ -113,13 +119,15 @@ const MainMenu = ({ style = "" }) => {
 
         <li
           className={`${
-            pathname.split('/')[1] == 'dashboard'  || pathname.split('/')[1] == 'vendor-dashboard' ? "current" : ""
+            pathname.split("/")[1] == "dashboard" ||
+            pathname.split("/")[1] == "vendor-dashboard"
+              ? "current"
+              : ""
           } menu-item-has-children`}
         >
           <a href="#">
             <span className="mr-10">Dashboard</span>
             <i className="icon icon-chevron-sm-down" />
-          
           </a>
           <ul className="subnav ">
             {dashboardItems.map((menu, i) => (
@@ -134,7 +142,15 @@ const MainMenu = ({ style = "" }) => {
             ))}
           </ul>
         </li>
-
+        <li className={pathname === "/" ? "current" : ""}>
+          <Link href="/">Home</Link>
+        </li>
+        <li className={pathname === "/properties" ? "current" : ""}>
+          <Link href="/properties">Properties</Link>
+        </li>
+        <li className={pathname === "/wishlist" ? "current" : ""}>
+          <Link href="/wishlist">WishList</Link>
+        </li>
         <li className={pathname === "/contact" ? "current" : ""}>
           <Link href="/contact">Contact</Link>
         </li>

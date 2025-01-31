@@ -3,7 +3,7 @@ import DropdownFilter from "../DropdownFilter";
 import DropDown from "../DropDown";
 import { useFormik } from "formik";
 import { useSelector } from "react-redux";
-
+import {useRouter } from "next/navigation";
 // third party import
 import _ from "lodash";
 import * as Yup from "yup";
@@ -47,13 +47,14 @@ const ContentTabContent = () => {
 
   // store states
   const { settedRequest, isLoading } = useSelector((state) => state.request);
-
+  const router = useRouter();
   // formik define
   const formik = useFormik({
     initialValues: getInitialValues(settedRequest),
     validationSchema: requestSchema,
     onSubmit: (values) => {
       console.log("Form Values:", values);
+      router.push("/my-ads")
       // Handle form submission logic here
     },
   });

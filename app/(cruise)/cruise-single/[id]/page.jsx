@@ -1,19 +1,19 @@
 import dynamic from "next/dynamic";
 import "photoswipe/dist/photoswipe.css";
-import cruiseData from "@/data/cruise";
-import Header11 from "@/components/header/header-11";
-import Overview from "@/components/cruise-single/Overview";
-import TopBreadCrumb from "@/components/cruise-single/TopBreadCrumb";
-import SidebarRight from "@/components/cruise-single/SidebarRight";
-import ReviewProgress from "@/components/cruise-single/guest-reviews/ReviewProgress";
-import DetailsReview from "@/components/cruise-single/guest-reviews/DetailsReview";
-import ReplyForm from "@/components/cruise-single/ReplyForm";
-import ReplyFormReview from "@/components/cruise-single/ReplyFormReview";
-import Facilities from "@/components/cruise-single/Facilities";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultFooter from "@/components/footer/default";
-import MapPropertyFinder from "@/components/cruise-single/MapPropertyFinder";
-import GalleryCruiseSlider from "@/components/cruise-single/GalleryCruiseSlider";
+import cruiseData from "../../../../data/cruise";
+import Header11 from "../../../../components/header/header-11";
+import Overview from "../../../../components/cruise-single/Overview";
+import TopBreadCrumb from "../../../../components/cruise-single/TopBreadCrumb";
+import SidebarRight from "../../../../components/cruise-single/SidebarRight";
+import ReviewProgress from "../../../../components/cruise-single/guest-reviews/ReviewProgress";
+import DetailsReview from "../../../../components/cruise-single/guest-reviews/DetailsReview";
+import ReplyForm from "../../../../components/cruise-single/ReplyForm";
+import ReplyFormReview from "../../../../components/cruise-single/ReplyFormReview";
+import Facilities from "../../../../components/cruise-single/Facilities";
+import CallToActions from "../../../../components/common/CallToActions";
+import DefaultFooter from "../../../../components/footer/default";
+import MapPropertyFinder from "../../../../components/cruise-single/MapPropertyFinder";
+import GalleryCruiseSlider from "../../../../components/cruise-single/GalleryCruiseSlider";
 
 export const metadata = {
   title: "Cruise Single || GoTrip - Travel & Tour React NextJS Template",

@@ -1,14 +1,14 @@
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import LocationTopBar from "@/components/common/LocationTopBar";
-import RelatedBlog from "@/components/blog/blog-details/RelatedBlog";
-import blogsData from "@/data/blogs";
-import DetailsContent from "@/components/blog/blog-details/DetailsContent";
-import FormReply from "@/components/blog/blog-details/FormReply";
-import TopComment from "@/components/blog/blog-details/TopComment";
-import BlogNavigator from "@/components/blog/blog-details/BlogNavigator";
-import Comments from "@/components/blog/blog-details/Comments";
+import CallToActions from "../../../../components/common/CallToActions";
+import DefaultHeader from "../../../../components/header/default-header";
+import DefaultFooter from "../../../../components/footer/default";
+import LocationTopBar from "../../../../components/common/LocationTopBar";
+import RelatedBlog from "../../../../components/blog/blog-details/RelatedBlog";
+import blogsData from "../../../../data/blogs";
+import DetailsContent from "../../../../components/blog/blog-details/DetailsContent";
+import FormReply from "../../../../components/blog/blog-details/FormReply";
+import TopComment from "../../../../components/blog/blog-details/TopComment";
+import BlogNavigator from "../../../../components/blog/blog-details/BlogNavigator";
+import Comments from "../../../../components/blog/blog-details/Comments";
 
 export const metadata = {
   title: "Blog Single || GoTrip - Travel & Tour React NextJS Template",

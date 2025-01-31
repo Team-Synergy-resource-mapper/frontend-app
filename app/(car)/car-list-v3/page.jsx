@@ -1,10 +1,10 @@
-import Header11 from "@/components/header/header-11";
-import MainFilterSearchBox from "@/components/car-list/car-list-v3/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/car-list/car-list-v3/TopHeaderFilter";
-import CarPropertes from "@/components/car-list/car-list-v3/CarPropertes";
-import Pagination from "@/components/car-list/common/Pagination";
-import DropdownSelelctBar from "@/components/car-list/common/DropdownSelelctBar";
-import MapPropertyFinder from "@/components/car-list/common/MapPropertyFinder";
+import Header11 from "../../../components/header/header-11";
+import MainFilterSearchBox from "../../../components/car-list/car-list-v3/MainFilterSearchBox";
+import TopHeaderFilter from "../../../components/car-list/car-list-v3/TopHeaderFilter";
+import CarPropertes from "../../../components/car-list/car-list-v3/CarPropertes";
+import Pagination from "../../../components/car-list/common/Pagination";
+import DropdownSelelctBar from "../../../components/car-list/common/DropdownSelelctBar";
+import MapPropertyFinder from "../../../components/car-list/common/MapPropertyFinder";
 
 export const metadata = {
   title: "Car List v3 || GoTrip - Travel & Tour React NextJS Template",

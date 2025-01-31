@@ -1,10 +1,10 @@
-import Header11 from "@/components/header/header-11";
-import MainFilterSearchBox from "@/components/rental-list/rental-list-v3/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/rental-list/rental-list-v3/TopHeaderFilter";
-import DropdownSelelctBar from "@/components/rental-list/common/DropdownSelelctBar";
-import Pagination from "@/components/rental-list/common/Pagination";
-import MapPropertyFinder from "@/components/rental-list/common/MapPropertyFinder";
-import RentalProperties from "@/components/rental-list/rental-list-v3/RentalProperties";
+import Header11 from "../../../components/header/header-11";
+import MainFilterSearchBox from "../../../components/rental-list/rental-list-v3/MainFilterSearchBox";
+import TopHeaderFilter from "../../../components/rental-list/rental-list-v3/TopHeaderFilter";
+import DropdownSelelctBar from "../../../components/rental-list/common/DropdownSelelctBar";
+import Pagination from "../../../components/rental-list/common/Pagination";
+import MapPropertyFinder from "../../../components/rental-list/common/MapPropertyFinder";
+import RentalProperties from "../../../components/rental-list/rental-list-v3/RentalProperties";
 
 export const metadata = {
   title: "Rental List v3 || GoTrip - Travel & Tour React NextJS Template",

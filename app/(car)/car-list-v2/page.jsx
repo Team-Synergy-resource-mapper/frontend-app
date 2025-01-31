@@ -1,10 +1,10 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header11 from "@/components/header/header-11";
-import DefaultFooter from "@/components/footer/default";
-import TopHeaderFilter from "@/components/car-list/car-list-v2/TopHeaderFilter";
-import Pagination from "@/components/car-list/common/Pagination";
-import Sidebar from "@/components/car-list/car-list-v2/Sidebar";
-import CarPropertes from "@/components/car-list/car-list-v2/CarPropertes";
+import CallToActions from "../../../components/common/CallToActions";
+import Header11 from "../../../components/header/header-11";
+import DefaultFooter from "../../../components/footer/default";
+import TopHeaderFilter from "../../../components/car-list/car-list-v2/TopHeaderFilter";
+import Pagination from "../../../components/car-list/common/Pagination";
+import Sidebar from "../../../components/car-list/car-list-v2/Sidebar";
+import CarPropertes from "../../../components/car-list/car-list-v2/CarPropertes";
 
 export const metadata = {
   title: "Car List v2 || GoTrip - Travel & Tour React NextJS Template",

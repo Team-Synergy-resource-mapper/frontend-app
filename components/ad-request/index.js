@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from "react";
-import Header11 from "../../components/header/header-11";
+import Header10 from "../../components/header/header-10";
 import SettingsTabs from "./components/index";
 import Footer from "./common/Footer";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,7 +37,7 @@ const index = ({id}) => {
       {/* End Page Title */}
       <div className="header-margin"></div>
 
-      <Header11 />
+      <Header10 />
       {/* End dashboard-header */}
 
       <section className="pt-40 pb-40 bg-light-2">

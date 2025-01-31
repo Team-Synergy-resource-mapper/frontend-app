@@ -1,15 +1,15 @@
 import dynamic from "next/dynamic";
-import DefaultFooter from "@/components/footer/default";
-import Header7 from "@/components/header/header-7";
-import Hero7 from "@/components/hero/hero-7";
-import BlockGuide from "@/components/block/BlockGuide";
-import Subscribe from "@/components/home/home-7/Subscribe";
-import Blog from "@/components/home/home-7/Blog";
-import Counter from "@/components/counter/Counter3";
-import Testimonial from "@/components/home/home-7/Testimonial";
-import TopDestinations from "@/components/home/home-7/TopDestinations";
-import Rentals from "@/components/rentals/Rentals";
-import HotelTypes from "@/components/home/home-7/HotelTypes";
+import DefaultFooter from "../../../components/footer/default";
+import Header7 from "../../../components/header/header-7";
+import Hero7 from "../../../components/hero/hero-7";
+import BlockGuide from "../../../components/block/BlockGuide";
+import Subscribe from "../../../components/home/home-7/Subscribe";
+import Blog from "../../../components/home/home-7/Blog";
+import Counter from "../../../components/counter/Counter3";
+import Testimonial from "../../../components/home/home-7/Testimonial";
+import TopDestinations from "../../../components/home/home-7/TopDestinations";
+import Rentals from "../../../components/rentals/Rentals";
+import HotelTypes from "../../../components/home/home-7/HotelTypes";
 
 export const metadata = {
   title: "Home-7 || GoTrip - Travel & Tour React NextJS Template",

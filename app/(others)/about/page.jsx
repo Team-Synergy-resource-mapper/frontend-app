@@ -1,15 +1,15 @@
 import dynamic from "next/dynamic";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import WhyChoose from "@/components/block/BlockGuide";
-import Block1 from "@/components/about/Block1";
+import CallToActions from "../../../components/common/CallToActions";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import WhyChoose from "../../../components/block/BlockGuide";
+import Block1 from "../../../components/about/Block1";
 import Image from "next/image";
-import Counter from "@/components/counter/Counter";
-import Team1 from "@/components/team/Team1";
-import Testimonial from "@/components/testimonial/Testimonial";
-import Counter2 from "@/components/counter/Counter2";
-import Brand from "@/components/brand/Brand";
+import Counter from "../../../components/counter/Counter";
+import Team1 from "../../../components/team/Team1";
+import Testimonial from "../../../components/testimonial/Testimonial";
+import Counter2 from "../../../components/counter/Counter2";
+import Brand from "../../../components/brand/Brand";
 
 export const metadata = {
   title: "About || GoTrip - Travel & Tour React NextJS Template",

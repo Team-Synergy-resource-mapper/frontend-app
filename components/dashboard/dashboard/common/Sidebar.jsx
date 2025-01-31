@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { isActiveLink } from "@/utils/linkActiveChecker";
+import { isActiveLink } from "../../../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
 
 const Sidebar = () => {

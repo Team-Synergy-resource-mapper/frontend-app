@@ -117,8 +117,7 @@ const Properties = () => {
                 </div>
 
                 <div className="text-14 lh-15 mt-20">
-                  <div className="fw-500">{item.category}</div>
-                  <div className="text-light-1">1 extra-large double bed</div>
+                  <div className="fw-500">{item.subCategory}</div>
                 </div>
 
                 <div className="text-14 text-green-2 lh-15 mt-10">

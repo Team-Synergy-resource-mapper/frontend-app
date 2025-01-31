@@ -1,11 +1,12 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header11 from "@/components/header/header-11";
-import DefaultFooter from "@/components/footer/default";
-import MainFilterSearchBox from "@/components/rental-list/rental-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/rental-list/rental-list-v1/TopHeaderFilter";
-import RentalProperties from "@/components/rental-list/rental-list-v1/RentalProperties";
-import Pagination from "@/components/rental-list/common/Pagination";
-import Sidebar from "@/components/rental-list/rental-list-v1/Sidebar";
+
+import CallToActions from "../../../components/common/CallToActions";
+import Header11 from "../../../components/header/header-11";
+import DefaultFooter from "../../../components/footer/default";
+import MainFilterSearchBox from "../../../components/rental-list/rental-list-v1/MainFilterSearchBox";
+import TopHeaderFilter from "../../../components/rental-list/rental-list-v1/TopHeaderFilter";
+import RentalProperties from "../../../components/rental-list/rental-list-v1/RentalProperties";
+import Pagination from "../../../components/rental-list/common/Pagination";
+import Sidebar from "../../../components/rental-list/rental-list-v1/Sidebar";
 
 export const metadata = {
   title: "Rental List v1 || GoTrip - Travel & Tour React NextJS Template",

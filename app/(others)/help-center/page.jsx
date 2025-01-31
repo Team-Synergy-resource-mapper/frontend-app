@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
-import CallToActions from "@/components/common/CallToActions";
-import Faq from "@/components/faq/Faq";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import HelpSearchBlock from "@/components/block/HelpSearchBlock";
-import HelpBlock from "@/components/block/HelpBlock";
+import CallToActions from "../../../components/common/CallToActions";
+import Faq from "../../../components/faq/Faq";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import HelpSearchBlock from "../../../components/block/HelpSearchBlock";
+import HelpBlock from "../../../components/block/HelpBlock";
 
 export const metadata = {
   title: "Help Center || GoTrip - Travel & Tour React NextJS Template",

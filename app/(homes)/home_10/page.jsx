@@ -1,17 +1,17 @@
 import dynamic from "next/dynamic";
-import Header10 from "@/components/header/header-10";
-import Hero10 from "@/components/hero/hero-10";
+import Header10 from "../../../components/header/header-10";
+import Hero10 from "../../../components/hero/hero-10";
 import Link from "next/link";
-import Footer8 from "@/components/footer/footer-8";
-import Blog from "@/components/blog/Blog3";
-import BlockGuide from "@/components/block/BlockGuide";
-import Flights from "@/components/flight/Flights";
-import AppBanner from "@/components/home/home-10/AppBanner";
-import TopDestinations from "@/components/home/home-10/TopDestinations";
-import TestimonialRating from "@/components/home/home-10/TestimonialRating";
-import Testimonial from "@/components/home/home-10/Testimonial";
-import PopularRoutes from "@/components/home/home-10/PopularRoutes";
-import Locations from "@/components/home/home-10/Locations";
+import Footer8 from "../../../components/footer/footer-8";
+import Blog from "../../../components/blog/Blog3";
+import BlockGuide from "../../../components/block/BlockGuide";
+import Flights from "../../../components/flight/Flights";
+import AppBanner from "../../../components/home/home-10/AppBanner";
+import TopDestinations from "../../../components/home/home-10/TopDestinations";
+import TestimonialRating from "../../../components/home/home-10/TestimonialRating";
+import Testimonial from "../../../components/home/home-10/Testimonial";
+import PopularRoutes from "../../../components/home/home-10/PopularRoutes";
+import Locations from "../../../components/home/home-10/Locations";
 
 export const metadata = {
   title: "Synergy",

@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import TermsConent from "@/components/common/TermsConent";
+import CallToActions from "../../../components/common/CallToActions";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import TermsConent from "../../../components/common/TermsConent";
 
 export const metadata = {
   title: "Terms & Conditions || GoTrip - Travel & Tour React NextJS Template",

@@ -1,4 +1,3 @@
-import Sidebar from "./common/Sidebar";
 import Header10 from "../../components/header/header-10";
 import Footer from "./common/Footer";
 import WishlistTable from "./components/WishlistTable";
@@ -19,7 +18,7 @@ const index = () => {
             <div className="col-12">
               <div className="row y-gap-20 justify-between items-end pb-60 lg:pb-40 md:pb-32">
                 <div className="col-12">
-                  <h1 className="text-30 lh-14 fw-600">Wishlist</h1>
+                  <h1 className="text-30 lh-14 fw-600">My Ads</h1>
                   <div className="text-15 text-light-1">
                     Find the best buyer for your product
                   </div>

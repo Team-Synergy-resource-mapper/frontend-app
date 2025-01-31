@@ -1,11 +1,11 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header11 from "@/components/header/header-11";
-import DefaultFooter from "@/components/footer/default";
-import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v4/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/hotel-list/hotel-list-v4/TopHeaderFilter";
-import Pagination from "@/components/hotel-list/common/Pagination";
-import Sidebar from "@/components/hotel-list/hotel-list-v4/Sidebar";
-import HotelProperties from "@/components/hotel-list/hotel-list-v4/HotelProperties";
+import CallToActions from "../../../components/common/CallToActions";
+import Header11 from "../../../components/header/header-11";
+import DefaultFooter from "../../../components/footer/default";
+import MainFilterSearchBox from "../../../components/hotel-list/hotel-list-v4/MainFilterSearchBox";
+import TopHeaderFilter from "../../../components/hotel-list/hotel-list-v4/TopHeaderFilter";
+import Pagination from "../../../components/hotel-list/common/Pagination";
+import Sidebar from "../../../components/hotel-list/hotel-list-v4/Sidebar";
+import HotelProperties from "../../../components/hotel-list/hotel-list-v4/HotelProperties";
 
 export const metadata = {
   title: "Hotel List v5 || GoTrip - Travel & Tour React NextJS Template",

@@ -1,10 +1,10 @@
-import Header11 from "@/components/header/header-11";
-import MainFilterSearchBox from "@/components/cruise-list/cruise-list-v3/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/cruise-list/cruise-list-v3/TopHeaderFilter";
-import CruisePropertes from "@/components/cruise-list/cruise-list-v3/CruisePropertes";
-import Pagination from "@/components/cruise-list/common/Pagination";
-import DropdownSelelctBar from "@/components/cruise-list/common/DropdownSelelctBar";
-import MapPropertyFinder from "@/components/cruise-list/common/MapPropertyFinder";
+import Header11 from "../../../components/header/header-11";
+import MainFilterSearchBox from "../../../components/cruise-list/cruise-list-v3/MainFilterSearchBox";
+import TopHeaderFilter from "../../../components/cruise-list/cruise-list-v3/TopHeaderFilter";
+import CruisePropertes from "../../../components/cruise-list/cruise-list-v3/CruisePropertes";
+import Pagination from "../../../components/cruise-list/common/Pagination";
+import DropdownSelelctBar from "../../../components/cruise-list/common/DropdownSelelctBar";
+import MapPropertyFinder from "../../../components/cruise-list/common/MapPropertyFinder";
 
 export const metadata = {
   title: "Cruise List v3 || GoTrip - Travel & Tour React NextJS Template",

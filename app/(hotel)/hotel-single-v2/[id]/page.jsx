@@ -1,25 +1,25 @@
 import dynamic from "next/dynamic";
 import "photoswipe/dist/photoswipe.css";
-import { hotelsData } from "@/data/hotels";
-import DefaultHeader from "@/components/header/default-header";
-import RatingTag from "@/components/hotel-single/RatingTag";
-import TopBreadCrumb from "@/components/hotel-single/TopBreadCrumb";
-import AvailableRooms2 from "@/components/hotel-single/AvailableRooms2";
-import ReviewProgress2 from "@/components/hotel-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/hotel-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/hotel-single/ReplyForm";
-import ReplyFormReview2 from "@/components/hotel-single/ReplyFormReview2";
-import Facilities from "@/components/hotel-single/Facilities";
+import { hotelsData } from "../../../../data/hotels";
+import DefaultHeader from "../../../../components/header/default-header";
+import RatingTag from "../../../../components/hotel-single/RatingTag";
+import TopBreadCrumb from "../../../../components/hotel-single/TopBreadCrumb";
+import AvailableRooms2 from "../../../../components/hotel-single/AvailableRooms2";
+import ReviewProgress2 from "../../../../components/hotel-single/guest-reviews/ReviewProgress2";
+import DetailsReview2 from "../../../../components/hotel-single/guest-reviews/DetailsReview2";
+import ReplyForm from "../../../../components/hotel-single/ReplyForm";
+import ReplyFormReview2 from "../../../../components/hotel-single/ReplyFormReview2";
+import Facilities from "../../../../components/hotel-single/Facilities";
 import Image from "next/image";
-import Surroundings from "@/components/hotel-single/Surroundings";
-import HelpfulFacts from "@/components/hotel-single/HelpfulFacts";
-import Faq from "@/components/faq/Faq";
-import Hotels2 from "@/components/hotels/Hotels2";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultFooter from "@/components/footer/default";
-import FilterBox2 from "@/components/hotel-single/filter-box-2";
-import StickyHeader2 from "@/components/hotel-single/StickyHeader2";
-import GalleryTwo from "@/components/hotel-single/GalleryTwo";
+import Surroundings from "../../../../components/hotel-single/Surroundings";
+import HelpfulFacts from "../../../../components/hotel-single/HelpfulFacts";
+import Faq from "../../../../components/faq/Faq";
+import Hotels2 from "../../../../components/hotels/Hotels2";
+import CallToActions from "../../../../components/common/CallToActions";
+import DefaultFooter from "../../../../components/footer/default";
+import FilterBox2 from "../../../../components/hotel-single/filter-box-2";
+import StickyHeader2 from "../../../../components/hotel-single/StickyHeader2";
+import GalleryTwo from "../../../../components/hotel-single/GalleryTwo";
 
 export const metadata = {
   title: "Hotel Single v2 || GoTrip - Travel & Tour React NextJS Template",

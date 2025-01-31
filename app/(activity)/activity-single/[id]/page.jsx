@@ -1,23 +1,23 @@
 import dynamic from "next/dynamic";
 import "photoswipe/dist/photoswipe.css";
-import activityData from "@/data/activity";
-import Header11 from "@/components/header/header-11";
-import Overview from "@/components/activity-single/Overview";
-import TourSnapShot from "@/components/activity-single/TourSnapShot";
-import TopBreadCrumb from "@/components/activity-single/TopBreadCrumb";
-import SidebarRight from "@/components/activity-single/SidebarRight";
-import ReviewProgress2 from "@/components/activity-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/activity-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/activity-single/ReplyForm";
-import ReplyFormReview2 from "@/components/activity-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultFooter from "@/components/footer/default";
-import Tours from "@/components/tours/Tours";
-import Faq from "@/components/faq/Faq";
+import activityData from "../../../../data/activity";
+import Header11 from "../../../../components/header/header-11";
+import Overview from "../../../../components/activity-single/Overview";
+import TourSnapShot from "../../../../components/activity-single/TourSnapShot";
+import TopBreadCrumb from "../../../../components/activity-single/TopBreadCrumb";
+import SidebarRight from "../../../../components/activity-single/SidebarRight";
+import ReviewProgress2 from "../../../../components/activity-single/guest-reviews/ReviewProgress2";
+import DetailsReview2 from "../../../../components/activity-single/guest-reviews/DetailsReview2";
+import ReplyForm from "../../../../components/activity-single/ReplyForm";
+import ReplyFormReview2 from "../../../../components/activity-single/ReplyFormReview2";
+import CallToActions from "../../../../components/common/CallToActions";
+import DefaultFooter from "../../../../components/footer/default";
+import Tours from "../../../../components/tours/Tours";
+import Faq from "../../../../components/faq/Faq";
 import Link from "next/link";
-import ImportantInfo from "@/components/activity-single/ImportantInfo";
-import SlideGallery from "@/components/activity-single/SlideGallery";
-import MapPropertyFinder from "@/components/activity-single/MapPropertyFinder";
+import ImportantInfo from "../../../../components/activity-single/ImportantInfo";
+import SlideGallery from "../../../../components/activity-single/SlideGallery";
+import MapPropertyFinder from "../../../../components/activity-single/MapPropertyFinder";
 
 export const metadata = {
   title: "Activity Single || GoTrip - Travel & Tour React NextJS Template",

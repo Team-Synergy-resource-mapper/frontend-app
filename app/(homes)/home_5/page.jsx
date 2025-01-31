@@ -1,19 +1,19 @@
 import dynamic from "next/dynamic";
-import Header5 from "@/components/header/header-5";
-import Hero5 from "@/components/hero/hero-5";
+import Header5 from "../../../components/header/header-5";
+import Hero5 from "../../../components/hero/hero-5";
 import Link from "next/link";
-import Footer4 from "@/components/footer/footer-4";
-import Tours2 from "@/components/tours/Tours2";
-import TourCategories from "@/components/home/home-5/TourCategories";
-import Locations from "@/components/home/home-5/Locations";
-import CallToActions from "@/components/home/home-5/CallToActions";
-import Blog from "@/components/blog/Blog3";
-import Tours3 from "@/components/tours/Tours3";
-import DiscountsBanner from "@/components/home/home-5/DiscountsBanner";
-import Counter3 from "@/components/counter/Counter3";
-import WhyChooseUs from "@/components/home/home-5/WhyChooseUs";
-import Testimonial from "@/components/home/home-5/Testimonial";
-import Brand2 from "@/components/brand/Brand2";
+import Footer4 from "../../../components/footer/footer-4";
+import Tours2 from "../../../components/tours/Tours2";
+import TourCategories from "../../../components/home/home-5/TourCategories";
+import Locations from "../../../components/home/home-5/Locations";
+import CallToActions from "../../../components/home/home-5/CallToActions";
+import Blog from "../../../components/blog/Blog3";
+import Tours3 from "../../../components/tours/Tours3";
+import DiscountsBanner from "../../../components/home/home-5/DiscountsBanner";
+import Counter3 from "../../../components/counter/Counter3";
+import WhyChooseUs from "../../../components/home/home-5/WhyChooseUs";
+import Testimonial from "../../../components/home/home-5/Testimonial";
+import Brand2 from "../../../components/brand/Brand2";
 
 export const metadata = {
   title: "Home-5 || GoTrip - Travel & Tour React NextJS Template",

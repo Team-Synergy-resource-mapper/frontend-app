@@ -9,12 +9,12 @@ const Copyright = () => {
             <div className="d-flex items-center">
               © {new Date().getFullYear()} by
               <a
-                href="https://themeforest.net/user/ib-themes"
+                href="#"
                 className="mx-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ib-themes
+               Synergy
               </a>
               All rights reserved.
             </div>
@@ -33,7 +33,7 @@ const Copyright = () => {
       </div>
       {/* End .col */}
 
-      <div className="col-auto">
+      {/* <div className="col-auto">
         <div className="row y-gap-10 items-center">
           <div className="col-auto">
             <div className="d-flex items-center">
@@ -48,7 +48,7 @@ const Copyright = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End .col */}
     </div>
   );

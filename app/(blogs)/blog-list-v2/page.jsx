@@ -1,11 +1,11 @@
 import React from "react";
-import CallToActions from "@/components/common/CallToActions";
-import DefaultHeader from "@/components/header/default-header";
-import DefaultFooter from "@/components/footer/default";
-import LocationTopBar from "@/components/common/LocationTopBar";
-import Blog2 from "@/components/blog/Blog2";
-import BlogSidebar from "@/components/blog/blog-sidebar";
-import BlogPagination from "@/components/blog/BlogPagination";
+import CallToActions from "../../../components/common/CallToActions";
+import DefaultHeader from "../../../components/header/default-header";
+import DefaultFooter from "../../../components/footer/default";
+import LocationTopBar from "../../../components/common/LocationTopBar";
+import Blog2 from "../../../components/blog/Blog2";
+import BlogSidebar from "../../../components/blog/blog-sidebar";
+import BlogPagination from "../../../components/blog/BlogPagination";
 
 export const metadata = {
   title: "Blog List V2 || GoTrip - Travel & Tour React NextJS Template",

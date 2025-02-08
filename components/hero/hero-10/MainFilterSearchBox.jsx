@@ -13,9 +13,7 @@ const MainFilterSearchBox = () => {
         <div className="button-grid items-center">
           <FlyingFromLocation />
           {/* End Location Flying From */}
-          {/*start guest*/}
-          <GuestSearch />
-          {/* End guest */}
+
           <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar ">
             <div>
               <h4 className="text-15 fw-500 ls-2 lh-16">Search</h4>

@@ -23,7 +23,7 @@ const MainMenu = ({ style = "" }) => {
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
-        <li
+        {/* <li
           className={`${
             isActiveParentChaild(homeItems, pathname) ? "current" : ""
           } menu-item-has-children`}
@@ -44,9 +44,9 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
         {/* End home page menu */}
-
+{/* 
         <li
           className={
             isActiveParent
@@ -61,15 +61,15 @@ const MainMenu = ({ style = "" }) => {
           <div className="mega">
             <CategoriesMegaMenu setIsActiveParent={setIsActiveParent} />
           </div>
-        </li>
+        </li> */}
         {/* End categories menu items */}
 
-        <li className={pathname === "/destinations" ? "current" : ""}>
+        {/* <li className={pathname === "/destinations" ? "current" : ""}>
           <Link href="/destinations">Destinations</Link>
-        </li>
+        </li> */}
         {/* End Destinatinos single menu */}
 
-        <li
+        {/* <li
           className={`${
             isActiveParentChaild(blogItems, pathname) ? "current" : ""
           } menu-item-has-children`}
@@ -90,9 +90,9 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
         {/* End blogIems */}
-
+{/* 
         <li
           className={`${
             isActiveParentChaild(pageItems, pathname) ? "current" : ""
@@ -114,10 +114,10 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
         {/* End pages items */}
 
-        <li
+        {/* <li
           className={`${
             pathname.split("/")[1] == "dashboard" ||
             pathname.split("/")[1] == "vendor-dashboard"
@@ -141,7 +141,10 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
+        {/* end of dashboard */}
+
+
         <li className={pathname === "/" ? "current" : ""}>
           <Link href="/">Home</Link>
         </li>

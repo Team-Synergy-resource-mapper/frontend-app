@@ -328,42 +328,7 @@ export const destinationsHome10 = [
     location: "Vehicles",
     properties: "4,090",
     delayAnim: "200",
-  },
-  {
-    id: 4,
-    img: "/img/categories/1/4.png",
-    location: "Home and Garden",
-    properties: "4,090",
-    delayAnim: "300",
-  },
-  {
-    id: 5,
-    img: "/img/categories/1/5.png",
-    location: "Jobs",
-    properties: "4,090",
-    delayAnim: "400",
-  },
-  {
-    id: 6,
-    img: "/img/categories/1/6.png",
-    location: "Fashion and Beauty",
-    properties: "4,090",
-    delayAnim: "500",
-  },
-  {
-    id: 7,
-    img: "/img/categories/1/7.png",
-    location: "Animals",
-    properties: "4,090",
-    delayAnim: "600",
-  },
-  {
-    id: 8,
-    img: "/img/categories/1/8.png",
-    location: "Services",
-    properties: "4,090",
-    delayAnim: "700",
-  },
+  }
 ];
 
 export const destinations7 = [

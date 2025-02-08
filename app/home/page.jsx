@@ -9,7 +9,7 @@ import TopDestinations from "../../components/home/home-10/TopDestinations";
 import TestimonialRating from "../../components/home/home-10/TestimonialRating";
 import Testimonial from "../../components/home/home-10/Testimonial";
 import PopularRoutes from "../../components/home/home-10/PopularRoutes";
-import Locations from "../../components/home/home-10/Locations";
+import MainCategories from "../../components/home/home-10/MainCategories";
 
 export const metadata = {
   title: "Synergy",
@@ -55,13 +55,13 @@ const home_10 = () => {
           {/* End .row */}
 
           <div className="row y-gap-30 pt-40 sm:pt-20">
-            <Locations />
+            <MainCategories />
           </div>
           {/* End .row */}
         </div>
         {/* End .container */}
       </section>
-      {/* End Explore Hot Locations */}
+      {/* End Explore Hot MainCategories */}
 
 
 

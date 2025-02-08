@@ -11,7 +11,7 @@ import TopDestinations from "../../../components/home/home-10/TopDestinations";
 import TestimonialRating from "../../../components/home/home-10/TestimonialRating";
 import Testimonial from "../../../components/home/home-10/Testimonial";
 import PopularRoutes from "../../../components/home/home-10/PopularRoutes";
-import Locations from "../../../components/home/home-10/Locations";
+import Locations from "../../../components/home/home-10/MainCategories";
 
 export const metadata = {
   title: "Synergy",

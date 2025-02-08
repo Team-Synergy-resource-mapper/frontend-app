@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { destinationsHome10 } from "../../../data/desinations";
 
-const Locations = () => {
+const MainCategories = () => {
   return (
     <>
       {destinationsHome10.map((item) => (
         <div
-          className="col-xl-3 col-lg-4 col-md-6"
+          className="col-xl-4 col-lg-4 col-md-6"
           key={item.id}
           data-aos="fade"
           data-aos-delay={item.delayAnim}
         >
-          <Link href="/tour-list-v3" className="destCard -type-1 d-block">
+          <Link href="/properties" className="destCard -type-1 d-block">
             <div className="row x-gap-20 y-gap-20 items-center">
               <div className="col-auto">
                 <div className="destCard__image rounded-4">
@@ -36,4 +36,4 @@ const Locations = () => {
   );
 };
 
-export default Locations;
+export default MainCategories;

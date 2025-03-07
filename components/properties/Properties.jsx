@@ -111,21 +111,21 @@ const Properties = () => {
                     <div className="size-3 rounded-full bg-light-1"></div>
                   </div>
 
-                  <div className="col-auto">
+                  {/* <div className="col-auto">
                     <p className="text-14">2 km to city center</p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="text-14 lh-15 mt-20">
                   <div className="fw-500">{item.subCategory}</div>
                 </div>
 
-                <div className="text-14 text-green-2 lh-15 mt-10">
+                {/* <div className="text-14 text-green-2 lh-15 mt-10">
                   <div className="fw-500">Free cancellation</div>
                   <div className="">
                     You can cancel later, so lock in this great price today.
                   </div>
-                </div>
+                </div> */}
               </div>
               {/* End .col-md */}
 
@@ -134,7 +134,7 @@ const Properties = () => {
                   <div className="col-auto">
                     <div className="text-14 lh-14 fw-500">Exceptional</div>
                     <div className="text-14 lh-14 text-light-1">
-                      {item?.numberOfReviews} reviews
+                      {item?.numberOfReviews} views
                     </div>
                   </div>
                   <div className="col-auto">
@@ -145,18 +145,18 @@ const Properties = () => {
                 </div>
 
                 <div className="">
-                  <div className="text-14 text-light-1 mt-50 md:mt-20">
+                  {/* <div className="text-14 text-light-1 mt-50 md:mt-20">
                     8 nights, 2 adult
-                  </div>
+                  </div> */}
                   <div className="text-22 lh-12 fw-600 mt-5">
-                    US${item?.price}
+                    LKR {item?.price}
                   </div>
-                  <div className="text-14 text-light-1 mt-5">
-                    +US$828 taxes and charges
-                  </div>
+                  {/* <div className="text-14 text-light-1 mt-5">
+                    +LKR 828 taxes and charges
+                  </div> */}
 
                   <Link
-                    href={`/hotel-single-v1/${item.id}`}
+                    href={item.url ?? '#'}
                     className="button -md -dark-1 bg-blue-1 text-white mt-24"
                   >
                     See Availability{" "}

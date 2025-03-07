@@ -73,6 +73,13 @@ const slice = createSlice({
       state.Categorys = state.Categorys.filter(Category => Category.id !== action.payload);
       state.success = "Category deleted successfully."
     },
+    // SELECT CATEGORY
+    selectCategorySuccess(state, action){
+      const category = state.categories.findIndex(category=>category.id === action.payload)
+      if(category !== -1){
+        state.categories[category].checked = !state.categories[category].checked;
+      }
+    }
 
   }
 });
@@ -142,13 +149,21 @@ export function fetchCategories() {
     dispatch(slice.actions.startLoading());
 
     try {
-      // const response = await axiosServices.get('/Categorys', { params: queryParams });
-      const response = [
+      const response = await axiosServices.get('ads/category');
+      const responsef = [
           {id:1, label: "Electronics", count: 92, checked:false },
           {id:2, label: "Vehicles", count: 45, checked:false  },
-          {id:3, label: "Property", count: 21, checked:true  }
+          {id:3, label: "Property", count: 21, checked:false  }
         ];
-      dispatch(slice.actions.fetchCategoriesSuccess(response));
+      const modify = response.data.map(item=>{
+        return {
+          id: item.id,
+          label: item.name,
+          count: Math.floor(Math.random() * (999 - 500 + 1)) + 500,
+          checked: false
+        };
+      })
+      dispatch(slice.actions.fetchCategoriesSuccess(modify));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -195,4 +210,12 @@ export function deleteCategory(CategoryId) {
       dispatch(slice.actions.finishLoading());
     }
   };
+}
+
+
+
+export function selectCategory(categoryId){
+  return ()=>{
+    dispatch(slice.actions.selectCategorySuccess(categoryId))
+  }
 }

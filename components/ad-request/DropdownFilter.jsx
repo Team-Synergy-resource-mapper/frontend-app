@@ -18,16 +18,17 @@ const DropdownFilter = ({name, formik}) => {
   },[dispatch])
 
   // data pre-processing
-  useEffect(()=>{
-    if(categories){
-      const transformData = categories.map(category=>{return category.label});
-      setOptions(transformData);
-    }
-  },[categories])
+  // useEffect(()=>{
+  //   if(categories){
+  //     const transformData = categories.map(category=>{return category.label});
+  //     setOptions(transformData);
+  //   }
+  // },[categories])
 
   // handle events
   const handleItemClick = (option) => {
-    formik.setFieldValue(name, option)
+    console.log(categories.find(item => item.label === option).id)
+    formik.setFieldValue(name, categories.find(item => item.label === option).id)
   };
 
   if(isLoading){
@@ -42,20 +43,20 @@ const DropdownFilter = ({name, formik}) => {
         aria-expanded="false"
         data-bs-offset="0,10"
       >
-        <span className="js-dropdown-title">{formik.values[name] || "Select Category"}</span>
+        <span className="js-dropdown-title">{categories.find(item => item.id === formik.values[name])?.label || "Select Category"}</span>
         <i className="icon icon-chevron-sm-down text-7 ml-10" />
       </div>
       <div className="toggle-element -dropdown  dropdown-menu">
         <div className="text-14 y-gap-15 js-dropdown-list">
-          {options.map((option, index) => (
+          {categories.map((option, index) => (
             <div
               key={index}
               className={`${
-                formik.values[name] === option ? "text-blue-1" : ""
+                formik.values[name] === option.id ? "text-blue-1" : ""
               } js-dropdown-link`}
-              onClick={() => handleItemClick(option)}
+              onClick={() => handleItemClick(option.label)}
             >
-              {option}
+              {option.label}
             </div>
           ))}
         </div>

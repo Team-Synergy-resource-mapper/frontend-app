@@ -27,7 +27,7 @@ const Sidebar = () => {
       {/* End popular filter */}
 
       <div className="sidebar__item">
-        <h5 className="text-18 fw-500 mb-10">Deals</h5>
+        <h5 className="text-18 fw-500 mb-10">Sub Categories</h5>
         <div className="sidebar-checkbox">
           <div className="row y-gap-5 items-center">
             <DealsFilter />
@@ -48,46 +48,44 @@ const Sidebar = () => {
       </div>
       {/* End Nightly priceslider */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Aminities</h5>
         <div className="sidebar-checkbox">
           <AminitesFilter />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Aminities filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Star Rating</h5>
         <div className="row x-gap-10 y-gap-10 pt-10">
           <RatingsFilter />
         </div>
-      </div>
+      </div> */}
       {/* End rating filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Guest Rating</h5>
         <div className="sidebar-checkbox">
           <GuestRatingFilters />
         </div>
-      </div>
+      </div> */}
       {/* End Guest Rating */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Style</h5>
         <div className="sidebar-checkbox">
           <StyleFilter />
         </div>
-      </div>
+      </div> */}
       {/* End style filter */}
 
-      <div className="sidebar__item">
+      {/* <div className="sidebar__item">
         <h5 className="text-18 fw-500 mb-10">Neighborhood</h5>
         <div className="sidebar-checkbox">
           <NeighborhoddFilter />
         </div>
-        {/* End Sidebar-checkbox */}
-      </div>
+      </div> */}
       {/* End Aminities filter */}
     </>
   );

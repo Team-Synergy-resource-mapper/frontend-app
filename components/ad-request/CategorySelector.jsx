@@ -43,7 +43,7 @@ const CategorySelector = ({ name, formik, category }) => {
 
       {subCategories.map((subC) => {
         return (
-          formik.values[category] === subC.mainCategory && (
+          formik.values[category] === subC.mainCategoryId && (
             <div key={subC.id} className="col-lg-3 col-sm-6">
               <div className="row y-gap-15">
                 <div className="col-12">
@@ -51,8 +51,8 @@ const CategorySelector = ({ name, formik, category }) => {
                     <input
                       type="checkbox"
                       name={name}
-                      checked={formik.values.subCategory === subC.label}
-                      onChange={()=>handleItemClick(subC.label)}
+                      checked={formik.values.subCategory === subC.id}
+                      onChange={()=>handleItemClick(subC.id)}
                     />
                     <div className="form-checkbox__mark">
                       <div className="form-checkbox__icon icon-check" />

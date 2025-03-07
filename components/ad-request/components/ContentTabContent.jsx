@@ -3,11 +3,14 @@ import DropdownFilter from "../DropdownFilter";
 import DropDown from "../DropDown";
 import { useFormik } from "formik";
 import { useSelector } from "react-redux";
-import {useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 // third party import
 import _ from "lodash";
 import * as Yup from "yup";
 import CategorySelector from "../CategorySelector";
+import { dispatch } from "@/store/store";
+import { addRequest } from "@/store/reducers/data/adRequestReducer";
+
 
 // formik initial data
 const getInitialValues = (settedRequest) => {
@@ -27,6 +30,18 @@ const getInitialValues = (settedRequest) => {
   return newRequest;
 };
 
+
+const base64ToBlob = (base64) => {
+  const [prefix, data] = base64.split(',');
+  const mime = prefix.match(/:(.*?);/)[1];
+  const binary = atob(data);
+  const array = [];
+  for (let i = 0; i < binary.length; i++) {
+    array.push(binary.charCodeAt(i));
+  }
+  return new Blob([new Uint8Array(array)], { type: mime });
+};
+
 const requestSchema = Yup.object({
   title: Yup.string().required("Title is required"),
   description: Yup.string().required("Description is required"),
@@ -39,7 +54,7 @@ const requestSchema = Yup.object({
   images: Yup.array()
     .min(1, "At least one image is required") // Ensures the array has at least one item
     .required("Images are required"),
-  subCategory: Yup.string().required("Required sub category"),
+  subCategory: Yup.number().required("Required sub category"),
 });
 
 const ContentTabContent = () => {
@@ -52,10 +67,27 @@ const ContentTabContent = () => {
   const formik = useFormik({
     initialValues: getInitialValues(settedRequest),
     validationSchema: requestSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log("Form Values:", values);
-      router.push("/my-ads")
+      
+      const formData = new FormData();
+      formData.append('title', values.title);
+      formData.append("url","");
+      formData.append('description', values.description);
+      formData.append('category_id', values.category);
+      formData.append('sub_category_id', values.subCategory);
+      formData.append('price', values.price);
+      formData.append('transaction_type', values.trade);
+      formData.append('created_by', 'exampleUser'); // Adjust as necessary
+      formData.append('user_id',1);
+      formData.append('is_wanted', values.trade ? 'true' : 'false');
+      // Convert base64 image to Blob and append to FormData
+      const imageBlob = base64ToBlob(values.images[0]);
+      formData.append('image', imageBlob, 'image.png');
       // Handle form submission logic here
+      await dispatch(addRequest(formData))
+      
+      router.push("/my-ads")
     },
   });
 

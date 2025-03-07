@@ -23,21 +23,7 @@ const index = () => {
       <Header10 />
       {/* End Header 1 */}
 
-      <section className="pt-40 pb-40 bg-light-2">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="text-center">
-                <h1 className="text-30 fw-600">Find Your Dream Property</h1>
-              </div>
-              {/* End text-center */}
-              <MainFilterSearchBox />
-            </div>
-            {/* End col-12 */}
-          </div>
-        </div>
-      </section>
-      {/* Top SearchBanner */}
+     
 
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
@@ -94,7 +80,8 @@ const index = () => {
         {/* End .container */}
       </section>
       {/* End layout for listing sidebar and content */}
-
+      hello
+      <img src="https://i.ikman-st.com/konka-43-inch-led-tv-full-hd-for-sale-colombo-1/80b309a1-59a0-4e1e-b339-7cd2e3e6e14c/620/466/fitted.jpg,https://i.ikman-st.com/konka-43-inch-led-tv-full-hd-for-sale-colombo-1/80b309a1-59a0-4e1e-b339-7cd2e3e6e14c/100/70/cropped.jpg" alt="TV Image"></img>
       <CallToActions />
       {/* End Call To Actions Section */}
 

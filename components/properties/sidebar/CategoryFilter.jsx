@@ -1,6 +1,6 @@
 "use client"
 
-import { fetchCategories } from "../../../store/reducers/data/categoryReducer";
+import { fetchCategories,selectCategory } from "../../../store/reducers/data/categoryReducer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -18,6 +18,7 @@ const categoriesFilter = () => {
     if(categories){
       const transformData = categories.map((category,index)=>{
         return{
+          id:category.id,
           index:index,
           label:category.label,
           count:category.count,
@@ -34,8 +35,9 @@ const categoriesFilter = () => {
   },[dispatch])
 
 
-  const handleCheckboxChange = (index) => {
-    console.log(index)
+  const handleCheckboxChange = (id) => {
+    dispatch(selectCategory(id))
+    console.log(id)
   };
 
   return (
@@ -47,7 +49,7 @@ const categoriesFilter = () => {
           >
             <div className="col-auto">
               <div className="form-checkbox d-flex items-center">
-                <input type="checkbox" onChange={()=>handleCheckboxChange(index)} checked={filter.checked}/>
+                <input type="checkbox" onChange={()=>handleCheckboxChange(filter.id)} checked={filter.checked}/>
                 <div className="form-checkbox__mark">
                   <div className="form-checkbox__icon icon-check" />
                 </div>

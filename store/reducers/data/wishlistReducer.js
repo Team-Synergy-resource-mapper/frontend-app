@@ -144,19 +144,37 @@ export function fetchWish(id) {
 export function fetchWishList(queryParams) {
   return async () => {
     dispatch(slice.actions.startLoading());
+
     try {
       // const response = await axiosServices.get('/wishList', { params: queryParams });
+      console.log('helll')
+      // const responses = await axiosServices.get(`ads/advertisement/${1}`);
+      // const data = responses.data.map((ad) => ({
+      //   id: ad.id,
+      //   category: ad.category || "Breakfast Included",
+      //   subCategory: ad.sub_category || "Breakfast Included",
+      //   used: !ad.is_wanted,
+      //   condition: ad.is_wanted ? "sell" : "buy",
+      //   description: ad.location || "Westminster Borough, London",
+      //   slideImg: ["/img/hotels/1.png"], // Placeholder image
+      //   img: "/img/hotels/1.png",         // Placeholder image
+      //   title: ad.title || "The Montcalm At Brewery London City",
+      //   ratings: "4.7",                   // Placeholder rating
+      //   numberOfReviews: "3014",           // Placeholder number of reviews
+      //   price: ad.price?.toString(),
+      //   delayAnimation: "100",            // Static value for animation delay
+      // }));
       const response = [
         {
           id: 1,
+          title: "The Montcalm At Brewery London City",
+          description: "Westminster Borough, London",
           category: "Breakfast Included",
           subCategory: "Breakfast Included",
           used:true,
           condition:"buy",
-          description: "Westminster Borough, London",
           slideImg: ["/img/hotels/1.png"],
           img: "/img/hotels/1.png",
-          title: "The Montcalm At Brewery London City",
           ratings: "4.7",
           numberOfReviews: "3014",
           price: "72",

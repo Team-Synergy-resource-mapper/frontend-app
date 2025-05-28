@@ -1,24 +1,24 @@
 export const destinations1 = [
-  { id: 1, city: "Hawai", properties: "12,683",region:'north_america' },
-  { id: 2, city: "Istanbul", properties: "12,683",region:'europe' },
-  { id: 3, city: "San Diego", properties: "12,683",region:'north_america' },
-  { id: 4, city: "Phuket", properties: "12,683",region:'asia' },
-  { id: 5, city: "Reykjavik", properties: "12,683",region:'europe' },
-  { id: 6, city: "Santorini", properties: "12,683",region:'europe' },
-  { id: 7, city: "Los Angeles", properties: "12,683",region:'north_america' },
-  { id: 8, city: "Florence", properties: "12,683",region:'europe' },
-  { id: 9, city: "Mykonos", properties: "12,683",region:'europe' },
-  { id: 10, city: "Paris", properties: "12,683",region:'europe' },
-  { id: 11, city: "Dubai", properties: "12,683",region:'asia' },
-  { id: 12, city: "Krakow", properties: "12,683",region:'europe' },
-  { id: 13, city: "Jersey", properties: "12,683",region:'north_america' },
-  { id: 14, city: "Prag", properties: "12,683",region:'europe' },
-  { id: 15, city: "Amsterdam", properties: "12,683",region:'europe' },
-  { id: 16, city: "İbiza", properties: "12,683",region:'europe' },
-  { id: 17, city: "Boston", properties: "12,683",region:'north_america' },
-  { id: 18, city: "Florence", properties: "12,683",region:'europe' },
-  { id: 19, city: "Mykonos", properties: "12,683",region:'europe' },
-  { id: 20, city: "London", properties: "12,683",region:'europe' },
+  { id: 1, city: "Hawai", properties: "12,683", region: "north_america" },
+  { id: 2, city: "Istanbul", properties: "12,683", region: "europe" },
+  { id: 3, city: "San Diego", properties: "12,683", region: "north_america" },
+  { id: 4, city: "Phuket", properties: "12,683", region: "asia" },
+  { id: 5, city: "Reykjavik", properties: "12,683", region: "europe" },
+  { id: 6, city: "Santorini", properties: "12,683", region: "europe" },
+  { id: 7, city: "Los Angeles", properties: "12,683", region: "north_america" },
+  { id: 8, city: "Florence", properties: "12,683", region: "europe" },
+  { id: 9, city: "Mykonos", properties: "12,683", region: "europe" },
+  { id: 10, city: "Paris", properties: "12,683", region: "europe" },
+  { id: 11, city: "Dubai", properties: "12,683", region: "asia" },
+  { id: 12, city: "Krakow", properties: "12,683", region: "europe" },
+  { id: 13, city: "Jersey", properties: "12,683", region: "north_america" },
+  { id: 14, city: "Prag", properties: "12,683", region: "europe" },
+  { id: 15, city: "Amsterdam", properties: "12,683", region: "europe" },
+  { id: 16, city: "İbiza", properties: "12,683", region: "europe" },
+  { id: 17, city: "Boston", properties: "12,683", region: "north_america" },
+  { id: 18, city: "Florence", properties: "12,683", region: "europe" },
+  { id: 19, city: "Mykonos", properties: "12,683", region: "europe" },
+  { id: 20, city: "London", properties: "12,683", region: "europe" },
 ];
 
 export const destinations2 = [
@@ -314,6 +314,7 @@ export const destinationsHome10 = [
     location: "Electronics",
     properties: "4,090",
     delayAnim: "0",
+    link: "/electronics",
   },
   {
     id: 2,
@@ -321,6 +322,7 @@ export const destinationsHome10 = [
     location: "Property",
     properties: "4,090",
     delayAnim: "100",
+    link: "/property",
   },
   {
     id: 3,
@@ -328,7 +330,8 @@ export const destinationsHome10 = [
     location: "Vehicles",
     properties: "4,090",
     delayAnim: "200",
-  }
+    link: "/vehicles",
+  },
 ];
 
 export const destinations7 = [

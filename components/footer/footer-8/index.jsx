@@ -12,20 +12,16 @@ const index = () => {
         <div className="pt-60 pb-60">
           <div className="row y-gap-40 justify-between xl:justify-start">
             <div className="col-xl-4 col-lg-6">
-              <img src="/img/general/logo-light.svg" alt="image" style={{height: '100px'}} />
+              <img
+                src="/img/general/logo-light.svg"
+                alt="image"
+                style={{ height: "100px" }}
+              />
               <div className="row y-gap-30 justify-between pt-30">
                 <ContactInfo />
               </div>
               {/* End .row */}
 
-              <div className="row x-gap-20 y-gap-15 pt-60">
-                <div className="col-12">
-                  <h5 className="text-16 fw-500">Your all-in-one Adverticements app</h5>
-                </div>
-                {/* End .col */}
-
-                <AppButton />
-              </div>
               {/* End .row */}
 
               <div className="mt-60">

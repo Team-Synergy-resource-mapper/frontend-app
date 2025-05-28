@@ -142,7 +142,30 @@ export function fetchproperties(queryParams) {
     dispatch(slice.actions.startLoading());
 
     try {
-      // const response = await axiosServices.get('/propertys', { params: queryParams });
+          function transformItem(item) {
+              return {
+                id: item.id,
+                description: item.description || "No description available",
+                title: item.title || "Untitled",
+                category: item.main_category || "unknown",
+                subCategory: item.sub_category || "unknown",
+                used: true,
+                condition: item.transaction_type === "sale" ? "sell" : item.transaction_type,
+                price: "N/A",
+                ratings: "4.5",
+                img: item.image_urls?.[0] || "",
+                numberOfReviews: "128",
+                slideImg: item.image_urls || [],
+                delayAnimation: "100",
+                url: item.url || "#"
+              };
+            }
+
+            const responsee = await axiosServices.get('/advertisement');
+            console.log(responsee.data)
+            const transformedItems = responsee.data.slice(0, 100).map(transformItem);
+            console.log(transformedItems)
+            dispatch(slice.actions.fetchPropertiesSuccess(transformedItems));
       const hell = [{
         id: 1,
         description: "CAZ-2953 Suzuki Wagon R Stingray Manufactured-2017 Registration-2018 Genuine milage 101000",
@@ -764,7 +787,6 @@ export function fetchproperties(queryParams) {
         },
       ];
       
-      dispatch(slice.actions.fetchPropertiesSuccess(hell));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {
@@ -812,3 +834,5 @@ export function deleteproperty(propertyId) {
     }
   };
 }
+
+

@@ -149,21 +149,21 @@ export function fetchCategories() {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.get('ads/category');
+      // const response = await axiosServices.get('ads/category');
+      // const modify = response.data.map(item=>{
+      //   return {
+      //     id: item.id,
+      //     label: item.name,
+      //     count: Math.floor(Math.random() * (999 - 500 + 1)) + 500,
+      //     checked: false
+      //   };
+      // })
       const responsef = [
-          {id:1, label: "Electronics", count: 92, checked:false },
-          {id:2, label: "Vehicles", count: 45, checked:false  },
-          {id:3, label: "Property", count: 21, checked:false  }
+          {id:1, label: "electronics", count: null, checked:false },
+          {id:2, label: "property", count: null, checked:false  },
+          {id:3, label: "vehicle", count: null, checked:false  }
         ];
-      const modify = response.data.map(item=>{
-        return {
-          id: item.id,
-          label: item.name,
-          count: Math.floor(Math.random() * (999 - 500 + 1)) + 500,
-          checked: false
-        };
-      })
-      dispatch(slice.actions.fetchCategoriesSuccess(modify));
+      dispatch(slice.actions.fetchCategoriesSuccess(responsef));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {

@@ -149,31 +149,31 @@ export function fetchSubCategories() {
     dispatch(slice.actions.startLoading());
 
     try {
-      const apiResponse = await axiosServices.get('ads/sub-category');
-      const response = apiResponse.data.map(item=>{return{
-        id:item.id,
-        label:item.name,
-        count:Math.floor(Math.random() * (699 - 300 + 1)) + 200,
-        checked:false,
-        mainCategoryId:item.category_id
-      }})
+      // const apiResponse = await axiosServices.get('ads/sub-category');
+      // const response = apiResponse.data.map(item=>{return{
+      //   id:item.id,
+      //   label:item.name,
+      //   count:Math.floor(Math.random() * (699 - 300 + 1)) + 200,
+      //   checked:false,
+      //   mainCategoryId:item.category_id
+      // }})
       const rebsponse = [
-          {id:1, label: "camera", count: 92 ,checked:false, mainCategory:"Electronics",mainCategoryId:1 },
-          {id:2, label: "van", count: 45,checked:false,mainCategory:"Vehicles" ,mainCategoryId:2  },
-          {id:3, label: "land", count: 21,checked:true ,mainCategory:"Property",mainCategoryId:2  },
-          {id:4, label: "ac", count: 78,checked:false,mainCategory:"Electronics",mainCategoryId:1   },
-          {id:5, label: "Lorry", count: 679, checked:false,mainCategory:"Property",mainCategoryId:4   },
-          {id:6, label: "phone", count: 92 ,checked:false, mainCategory:"Electronics",mainCategoryId:2  },
-          {id:7, label: "car", count: 45,checked:false,mainCategory:"Vehicles",mainCategoryId:1   },
-          {id:8, label: "house", count: 21,checked:true ,mainCategory:"Property",mainCategoryId:2  },
-          {id:9, label: "laptop", count: 92 ,checked:false, mainCategory:"Electronics",mainCategoryId:3  },
-          {id:10, label: "Three wheel", count: 45,checked:false,mainCategory:"Vehicles",mainCategoryId:3   },
-          {id:11, label: "apartment", count: 21,checked:true ,mainCategory:"Property",mainCategoryId:1  },
-          {id:12, label: "tv", count: 92 ,checked:false, mainCategory:"Electronics",mainCategoryId:3  },
-          {id:13, label: "bicycle", count: 45,checked:false,mainCategory:"Vehicles" ,mainCategoryId:2  },
-          {id:14, label: "room", count: 21,checked:true ,mainCategory:"Property" ,mainCategoryId:1 },
+          {id:1, label: "camera", count: null ,checked:false, mainCategory:"Electronics",mainCategoryId:1 },
+          {id:2, label: "van", count: null,checked:false,mainCategory:"Vehicles" ,mainCategoryId:2  },
+          {id:3, label: "land", count: null,checked:false ,mainCategory:"Property",mainCategoryId:2  },
+          {id:4, label: "ac", count: null,checked:false,mainCategory:"Electronics",mainCategoryId:1   },
+          {id:5, label: "Lorry", count: null, checked:false,mainCategory:"Property",mainCategoryId:4   },
+          {id:6, label: "phone", count: null ,checked:false, mainCategory:"Electronics",mainCategoryId:2  },
+          {id:7, label: "car", count: null,checked:false,mainCategory:"Vehicles",mainCategoryId:1   },
+          {id:8, label: "house", count: null,checked:false ,mainCategory:"Property",mainCategoryId:2  },
+          {id:9, label: "laptop", count: null ,checked:false, mainCategory:"Electronics",mainCategoryId:3  },
+          {id:10, label: "Three wheel", count: null,checked:false,mainCategory:"Vehicles",mainCategoryId:3   },
+          {id:11, label: "apartment", count: null,checked:false ,mainCategory:"Property",mainCategoryId:1  },
+          {id:12, label: "tv", count: null ,checked:false, mainCategory:"Electronics",mainCategoryId:3  },
+          {id:13, label: "bicycle", count: null,checked:false,mainCategory:"Vehicles" ,mainCategoryId:2  },
+          {id:14, label: "room", count: null,checked:false ,mainCategory:"Property" ,mainCategoryId:1 },
         ];
-      dispatch(slice.actions.fetchSubCategoriesSuccess(response));
+      dispatch(slice.actions.fetchSubCategoriesSuccess(rebsponse));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {

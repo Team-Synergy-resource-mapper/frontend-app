@@ -11,9 +11,6 @@ const MainFilterSearchBox = () => {
     <>
       <div className="mainSearch -col-4 -w-1070 bg-white shadow-1 rounded-4 pr-20 py-20 lg:px-20 lg:pt-5 lg:pb-20 mt-15">
         <div className="button-grid items-center">
-          <FlyingFromLocation />
-          {/* End Location Flying From */}
-
           <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar ">
             <div>
               <h4 className="text-15 fw-500 ls-2 lh-16">Search</h4>

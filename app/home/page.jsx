@@ -4,11 +4,6 @@ import Hero10 from "../../components/hero/hero-10";
 import Link from "next/link";
 import Footer8 from "../../components/footer/footer-8";
 import BlockGuide from "../../components/block/BlockGuide";
-import AppBanner from "../../components/home/home-10/AppBanner";
-import TopDestinations from "../../components/home/home-10/TopDestinations";
-import TestimonialRating from "../../components/home/home-10/TestimonialRating";
-import Testimonial from "../../components/home/home-10/Testimonial";
-import PopularRoutes from "../../components/home/home-10/PopularRoutes";
 import MainCategories from "../../components/home/home-10/MainCategories";
 
 export const metadata = {
@@ -26,7 +21,7 @@ const home_10 = () => {
 
       <Hero10 />
       {/* End Hero 5 */}
-      
+
       {/* End Tours Categories */}
 
       <section className="layout-pt-md layout-pb-md">
@@ -35,9 +30,6 @@ const home_10 = () => {
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">Explore Main Categories</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
               </div>
             </div>
             {/* End .col */}
@@ -63,8 +55,6 @@ const home_10 = () => {
       </section>
       {/* End Explore Hot MainCategories */}
 
-
-
       {/* why we choose us */}
       <section className="layout-pt-sm layout-pb-md">
         <div className="container">
@@ -88,101 +78,7 @@ const home_10 = () => {
         {/* End .container */}
       </section>
 
-
-      {/* Why choose Block Guide Section */}
-
-      {/* Popular Routes Sections */}
-
-      <section className="layout-pt-md layout-pb-lg">
-        <div className="container">
-          <div className="row justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Top Sellings</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular items have a lot to offer
-                </p>
-              </div>
-            </div>
-            {/* End col-auto */}
-
-            <div className="col-auto">
-              <Link
-                href="/properties"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End col-auto */}
-          </div>
-          {/* End .row */}
-
-          <div className="relative mt-40 sm:mt-20 js-section-slider">
-            <TopDestinations />
-          </div>
-          {/* End slider  */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End .Top Destinations */}
-
-      <section className="layout-pt-lg layout-pb-lg bg-dark-3">
-        <div className="container">
-          <div className="row y-gap-40 justify-between text-white">
-            <div className="col-xl-5 col-lg-6">
-              <TestimonialRating />
-            </div>
-            {/* End .col */}
-
-            <div className="col-lg-6">
-              <Testimonial />
-            </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-        </div>
-      </section>
-      {/* End testimonial and brand sections Section */}
-
-      <section className="layout-pt-lg layout-pb-lg">
-        <div className="container">
-          <div className="row justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Explore items</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular items have a lot to offer
-                </p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                href="/properties"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-          </div>
-          {/* End .row */}
-
-          <div className="relative mt-40 sm:mt-20">
-            <PopularRoutes />
-          </div>
-          {/* End relative */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End popular routes Section */}
-
-      <AppBanner />
-      {/* App Banner Section */}
-
       <Footer8 />
-      {/* End Footer Section */}
     </>
   );
 };

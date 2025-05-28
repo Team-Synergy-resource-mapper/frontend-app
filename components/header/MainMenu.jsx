@@ -151,10 +151,10 @@ const MainMenu = ({ style = "" }) => {
           <Link href="/properties">Properties</Link>
         </li>
         <li className={pathname === "/properties" ? "current" : ""}>
-          <Link href="/properties">Vehicles</Link>
+          <Link href="/vehicles">Vehicles</Link>
         </li>
         <li className={pathname === "/properties" ? "current" : ""}>
-          <Link href="/properties">Electronics</Link>
+          <Link href="/electronics">Electronics</Link>
         </li>
         <li className={pathname === "/my-ads" ? "current" : ""}>
           <Link href="/my-ads">My Ads</Link>

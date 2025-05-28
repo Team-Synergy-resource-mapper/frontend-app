@@ -11,7 +11,7 @@ const MainCategories = () => {
           data-aos="fade"
           data-aos-delay={item.delayAnim}
         >
-          <Link href="/properties" className="destCard -type-1 d-block">
+          <Link href={item.link} className="destCard -type-1 d-block">
             <div className="row x-gap-20 y-gap-20 items-center">
               <div className="col-auto">
                 <div className="destCard__image rounded-4">

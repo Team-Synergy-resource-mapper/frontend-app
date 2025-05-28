@@ -46,7 +46,7 @@ const MainMenu = ({ style = "" }) => {
           </ul>
         </li> */}
         {/* End home page menu */}
-{/* 
+        {/* 
         <li
           className={
             isActiveParent
@@ -92,7 +92,7 @@ const MainMenu = ({ style = "" }) => {
           </ul>
         </li> */}
         {/* End blogIems */}
-{/* 
+        {/* 
         <li
           className={`${
             isActiveParentChaild(pageItems, pathname) ? "current" : ""
@@ -144,19 +144,24 @@ const MainMenu = ({ style = "" }) => {
         </li> */}
         {/* end of dashboard */}
 
-
         <li className={pathname === "/" ? "current" : ""}>
           <Link href="/">Home</Link>
         </li>
         <li className={pathname === "/properties" ? "current" : ""}>
           <Link href="/properties">Properties</Link>
         </li>
+        <li className={pathname === "/properties" ? "current" : ""}>
+          <Link href="/properties">Vehicles</Link>
+        </li>
+        <li className={pathname === "/properties" ? "current" : ""}>
+          <Link href="/properties">Electronics</Link>
+        </li>
         <li className={pathname === "/my-ads" ? "current" : ""}>
           <Link href="/my-ads">My Ads</Link>
         </li>
-        <li className={pathname === "/contact" ? "current" : ""}>
+        {/* <li className={pathname === "/contact" ? "current" : ""}>
           <Link href="/contact">Contact</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

@@ -52,7 +52,7 @@ const CategorySelector = ({ name, formik, category }) => {
                       type="checkbox"
                       name={name}
                       checked={formik.values.subCategory === subC.id}
-                      onChange={()=>handleItemClick(subC.id)}
+                      onChange={()=>handleItemClick(subC.label)}
                     />
                     <div className="form-checkbox__mark">
                       <div className="form-checkbox__icon icon-check" />

@@ -146,8 +146,30 @@ export function fetchWishList(queryParams) {
     dispatch(slice.actions.startLoading());
 
     try {
-      // const response = await axiosServices.get('/wishList', { params: queryParams });
-      console.log('helll')
+      function transformAdData(raw) {
+            return {
+              id: raw.id || 0,
+              title: raw.title || "Untitled Advertisement",
+              description: raw.description?.split('.')[0] || "No description available",
+              category: raw.main_category || "General",
+              subCategory: raw.sub_category || "General",
+              used: raw.transaction_type === "sale",
+              condition: raw.wanted_offering === "offering" ? "buy" : "sell",
+              slideImg: raw.image_urls || [],
+              img: raw.image_urls?.[0] || "/img/hotels/default.png",
+              ratings: "4.7",
+              numberOfReviews: "3014",
+              price: "72",
+              delayAnimation: "100",
+            };
+          }
+
+          
+      const userId = '1212'; // Replace with the actual user ID
+      const responsee = await axiosServices.get(`/advertisement/${userId}`);
+      const formattedAds = responsee.data.map(transformAdData);
+      console.log(formattedAds);
+      console.log(responsee)
       // const responses = await axiosServices.get(`ads/advertisement/${1}`);
       // const data = responses.data.map((ad) => ({
       //   id: ad.id,
@@ -426,7 +448,7 @@ export function fetchWishList(queryParams) {
         },
       ];
       
-      dispatch(slice.actions.fetchWishListSuccess(response));
+      dispatch(slice.actions.fetchWishListSuccess(formattedAds));
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {

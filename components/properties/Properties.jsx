@@ -4,7 +4,7 @@ import { hotelsData } from "../data/hotels";
 import { Navigation, Pagination } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // third party import
@@ -56,13 +56,14 @@ const Properties = () => {
                       >
                         {item?.slideImg?.map((slide, i) => (
                           <SwiperSlide key={i}>
-                            <Image
-                              width={250}
-                              height={250}
-                              className="rounded-4 col-12 js-lazy"
-                              src={slide}
-                              alt="image"
-                            />
+                            <FallbackImage
+                                width={250}
+                                height={250}
+                                className="rounded-4 col-12 js-lazy"
+                                src={slide}
+                                fallbackSrc={item.category === "vehicle"? `/category/vehicle.png`:item.category==="property"?"/category/house.png":"/category/electronics.png"} // replace with your hardcoded fallback image
+                                alt="image"
+                              />
                           </SwiperSlide>
                         ))}
                       </Swiper>
@@ -173,3 +174,17 @@ const Properties = () => {
 };
 
 export default Properties;
+
+
+const FallbackImage = ({ src, fallbackSrc, ...props }) => {
+  const [imgSrc, setImgSrc] = useState(src);
+
+  return (
+    <img
+      {...props}
+      src={imgSrc}
+      onError={() => setImgSrc(fallbackSrc)}
+      alt="image"
+    />
+  );
+};

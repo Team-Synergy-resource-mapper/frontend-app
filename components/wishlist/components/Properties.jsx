@@ -1,20 +1,20 @@
 'use client'
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { fetchWishList } from "../../../store/reducers/data/wishlistReducer";
 
 const Properties = () => {
   // store states
   const dispatch = useDispatch();
-  const {wishList, isLoading} = useSelector(state=>state.wishlist);
+  const { wishList, isLoading } = useSelector(state => state.wishlist);
 
   // data pre-fetching
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(fetchWishList());
-  },[dispatch])
+  }, [dispatch])
 
-  if(isLoading){
+  if (isLoading) {
     return <h1>Loading...</h1>
   }
   return (
@@ -25,11 +25,12 @@ const Properties = () => {
             <div className="col-md-auto">
               <div className="cardImage ratio ratio-1:1 w-200 md:w-1/1 rounded-4">
                 <div className="cardImage__content">
-                  <Image
+                  <FallbackImage
                     width={200}
                     height={200}
                     className="rounded-4 col-12 js-lazy"
                     src={item.img}
+                    fallbackSrc={item.category === "vehicle"? `/category/vehicle.png`:item.category==="property"?"/category/house.png":"/category/electronics.png"} // replace with your hardcoded fallback image
                     alt="image"
                   />
                 </div>
@@ -53,7 +54,7 @@ const Properties = () => {
               <div className="row x-gap-10 y-gap-10 items-center pt-20">
                 <div className="col-auto">
                   <p className="text-14 ">
-                   {item.description}
+                    {item.description}
                   </p>
                 </div>
                 <div className="col-auto">
@@ -64,7 +65,7 @@ const Properties = () => {
               {/* End .row */}
 
               <div className="row x-gap-10 y-gap-10 pt-20">
-              <div className="row x-gap-10 y-gap-10 items-center">
+                <div className="row x-gap-10 y-gap-10 items-center">
                   <div className="col-auto">
                     <button className="flex-center  bg-light-2 rounded-4 size-35">
                       <i className="icon-eye text-primary  text-16 text-light-1" />
@@ -81,7 +82,7 @@ const Properties = () => {
                     </button>
                   </div>
                 </div>
-                
+
               </div>
               {/* End .row */}
             </div>
@@ -117,4 +118,19 @@ const Properties = () => {
   );
 };
 
+
+
 export default Properties;
+
+const FallbackImage = ({ src, fallbackSrc, ...props }) => {
+  const [imgSrc, setImgSrc] = useState(src);
+
+  return (
+    <img
+      {...props}
+      src={imgSrc}
+      onError={() => setImgSrc(fallbackSrc)}
+      alt="image"
+    />
+  );
+};

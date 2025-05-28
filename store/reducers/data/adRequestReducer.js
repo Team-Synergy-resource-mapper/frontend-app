@@ -106,11 +106,7 @@ export function addRequest(newrequest) {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.post('ads/advertisement', newrequest, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      const response = await axiosServices.post('advertisement', newrequest);
       dispatch(slice.actions.addrequestSuccess(response.data));
     } catch (error) {
       dispatch(slice.actions.hasError(error));

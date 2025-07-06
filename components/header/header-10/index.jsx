@@ -51,7 +51,7 @@ const Header1 = () => {
 
             <div className="col-auto">
               <div className="d-flex items-center">
-                <div className="d-flex items-center is-menu-opened-hide md:d-none">
+                {/* <div className="d-flex items-center is-menu-opened-hide md:d-none">
                   <Link
                     href="/login"
                     className="button px-30 fw-400 text-14 -blue-1 bg-dark-4 h-50 text-white"
@@ -64,7 +64,7 @@ const Header1 = () => {
                   >
                     Sign In / Register
                   </Link>
-                </div>
+                </div> */}
                 {/* End d-flex */}
 
                 {/* Start mobile menu icon */}

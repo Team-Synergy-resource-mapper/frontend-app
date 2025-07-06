@@ -1,12 +1,7 @@
-import DealsFilter from "./sidebar/DealsFilter";
-import SearchBox from "./sidebar/SearchBox";
-import CategoryFilter from "./sidebar/CategoryFilter";
-import AminitesFilter from "./sidebar/AminitesFilter";
-import RatingsFilter from "./sidebar/RatingsFilter";
-import GuestRatingFilters from "./sidebar/GuestRatingFilters";
-import StyleFilter from "./sidebar/StyleFilter";
-import NeighborhoddFilter from "./sidebar/NeighborhoddFilter";
-import PirceSlider from "./sidebar/PirceSlider";
+
+import SearchBox from "./search_box";
+import CategoryFilter from "./electronic_category_filter";
+import DealsFilter from "./DealsFilter";
 
 const Sidebar = () => {
   return (
@@ -23,6 +18,8 @@ const Sidebar = () => {
           <CategoryFilter />
         </div>
       </div> */}
+
+      
       {/* End popular filter */}
 
       <div className="sidebar__item">
@@ -37,14 +34,14 @@ const Sidebar = () => {
 
       
 
-      <div className="sidebar__item pb-30">
+      {/* <div className="sidebar__item pb-30">
         <h5 className="text-18 fw-500 mb-10">Nightly Price</h5>
         <div className="row x-gap-10 y-gap-30">
           <div className="col-12">
             <PirceSlider />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Nightly priceslider */}
 
       {/* <div className="sidebar__item">

@@ -142,30 +142,36 @@ export function fetchproperties(queryParams) {
     dispatch(slice.actions.startLoading());
 
     try {
-          function transformItem(item) {
-              return {
-                id: item.id,
-                description: item.description || "No description available",
-                title: item.title || "Untitled",
-                category: item.main_category || "unknown",
-                subCategory: item.sub_category || "unknown",
-                used: true,
-                condition: item.transaction_type === "sale" ? "sell" : item.transaction_type,
-                price: "N/A",
-                ratings: "4.5",
-                img: item.image_urls?.[0] || "",
-                numberOfReviews: "128",
-                slideImg: item.image_urls || [],
-                delayAnimation: "100",
-                url: item.url || "#"
-              };
-            }
+      function transformItem(item) {
+        return {
+          id: item.id,
+          description: item.description || "No description available",
+          title: item.title || "Untitled",
+          category: item.main_category || "unknown",
+          subCategory: item.sub_category || "unknown",
+          used: true,
+          condition: item.transaction_type === "sale" ? "sell" : item.transaction_type,
+          price: "N/A",
+          ratings: "4.5",
+          img: item.image_urls?.[0] || "",
+          numberOfReviews: "128",
+          slideImg: item.image_urls || [],
+          delayAnimation: "100",
+          url: item.url || "#"
+        };
+      }
 
-            const responsee = await axiosServices.get('/advertisement');
-            console.log(responsee.data)
-            const transformedItems = responsee.data.slice(0, 100).map(transformItem);
-            console.log(transformedItems)
-            dispatch(slice.actions.fetchPropertiesSuccess(transformedItems));
+      const responsee = await axiosServices.get('/ads/filter', {
+        params: {
+          main_category: queryParams.category,
+          sub_category: queryParams.subCategory,
+          limit: 100,
+        },
+      });
+      console.log(responsee.data)
+      const transformedItems = responsee.data.slice(0, 100).map(transformItem);
+      console.log(transformedItems)
+      dispatch(slice.actions.fetchPropertiesSuccess(transformedItems));
       const hell = [{
         id: 1,
         description: "CAZ-2953 Suzuki Wagon R Stingray Manufactured-2017 Registration-2018 Genuine milage 101000",
@@ -180,7 +186,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "128",
         slideImg: ["https://i.ikman-st.com/suzuki-wagon-r-stingray-2017-for-sale-kandy-208/fcfc632b-c435-4804-ad07-4ef0846a3151/1536/240/fitted.jpg"],
         delayAnimation: "100",
-        url:"https://ikman.lk/en/ad/suzuki-wagon-r-stingray-2017-for-sale-kandy-208"
+        url: "https://ikman.lk/en/ad/suzuki-wagon-r-stingray-2017-for-sale-kandy-208"
       },
       {
         id: 2,
@@ -196,7 +202,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "98",
         slideImg: ["https://i.ikman-st.com/toyota-hiace-lh113-1997-for-sale-kandy-17/d8061474-3461-4b6e-a9fb-85cb1c458c58/1536/240/fitted.jpg"],
         delayAnimation: "200",
-        url:"https://ikman.lk/en/ad/toyota-hiace-lh113-1997-for-sale-kandy-17"
+        url: "https://ikman.lk/en/ad/toyota-hiace-lh113-1997-for-sale-kandy-17"
       },
       {
         id: 3,
@@ -212,7 +218,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "145",
         slideImg: ["https://i.ikman-st.com/bajaj-re-2-storck-2003-for-sale-matara/1499d803-5cb2-4917-9748-4671bf2a2c48/1536/240/fitted.jpg"],
         delayAnimation: "300",
-        url:"https://ikman.lk/en/ad/bajaj-re-2-storck-2003-for-sale-matara"
+        url: "https://ikman.lk/en/ad/bajaj-re-2-storck-2003-for-sale-matara"
       },
       {
         id: 4,
@@ -228,7 +234,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "67",
         slideImg: ["https://i.ikman-st.com/bajaj-discover-125-new-2024-for-sale-colombo-256/572d27d3-7500-4ba4-a91e-47ad335ffdf6/1536/240/fitted.jpg"],
         delayAnimation: "400",
-        url:"https://ikman.lk/en/ad/bajaj-discover-125-new-2024-for-sale-colombo-256"
+        url: "https://ikman.lk/en/ad/bajaj-discover-125-new-2024-for-sale-colombo-256"
       },
       {
         id: 5,
@@ -244,7 +250,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "89",
         slideImg: ["https://i.ikman-st.com/mitsubishi-canter-automatic-gier-2002-for-sale-kandy/668207a4-0436-43aa-8844-46d4aad05689/1536/240/fitted.jpg"],
         delayAnimation: "500",
-        url:"https://ikman.lk/en/ad/mitsubishi-canter-automatic-gier-2002-for-sale-kandy"
+        url: "https://ikman.lk/en/ad/mitsubishi-canter-automatic-gier-2002-for-sale-kandy"
       },
       {
         id: 6,
@@ -260,9 +266,9 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "78",
         slideImg: ["https://i.ikman-st.com/ammaco-bicycle-england-for-sale-colombo/92a335d4-2cb7-4d53-846a-2baef92b61a6/1536/240/fitted.jpg"],
         delayAnimation: "600",
-        url:"https://ikman.lk/en/ad/ammaco-bicycle-england-for-sale-colombo"
+        url: "https://ikman.lk/en/ad/ammaco-bicycle-england-for-sale-colombo"
       },
-    
+
       // Electronics
       {
         id: 7,
@@ -276,9 +282,9 @@ export function fetchproperties(queryParams) {
         ratings: "4.8",
         img: "https://i.ikman-st.com/12000-inverter-brand-new-ac-for-sale-gampaha-1/ea77dc2d-8a36-4a27-9798-865ec2d3b7ec/732/240/fitted.jpg",
         numberOfReviews: "210",
-        slideImg: ["https://i.ikman-st.com/12000-inverter-brand-new-ac-for-sale-gampaha-1/ea77dc2d-8a36-4a27-9798-865ec2d3b7ec/732/240/fitted.jpg","https://i.ikman-st.com/12000-inverter-brand-new-ac-for-sale-gampaha-1/c5d49d4a-7a72-43a8-9261-95f3cd172e9c/620/466/fitted.jpg"],
+        slideImg: ["https://i.ikman-st.com/12000-inverter-brand-new-ac-for-sale-gampaha-1/ea77dc2d-8a36-4a27-9798-865ec2d3b7ec/732/240/fitted.jpg", "https://i.ikman-st.com/12000-inverter-brand-new-ac-for-sale-gampaha-1/c5d49d4a-7a72-43a8-9261-95f3cd172e9c/620/466/fitted.jpg"],
         delayAnimation: "700",
-        url:"https://ikman.lk/en/ad/12000-inverter-brand-new-ac-for-sale-gampaha-1"
+        url: "https://ikman.lk/en/ad/12000-inverter-brand-new-ac-for-sale-gampaha-1"
       },
       {
         id: 8,
@@ -294,7 +300,7 @@ export function fetchproperties(queryParams) {
         numberOfReviews: "90",
         slideImg: ["https://i.ikman-st.com/japan-set-for-sale-kalutara/c0b8afde-9525-41cd-9c68-af06b52e8019/620/466/fitted.jpg"],
         delayAnimation: "800",
-        url:"https://ikman.lk/en/ad/japan-set-for-sale-kalutara"
+        url: "https://ikman.lk/en/ad/japan-set-for-sale-kalutara"
       },
       {
         id: 9,
@@ -401,7 +407,7 @@ export function fetchproperties(queryParams) {
         slideImg: ["/img/hotels/1.png"],
         delayAnimation: "1500",
       },
-    
+
       // Property
       {
         id: 16,
@@ -478,7 +484,7 @@ export function fetchproperties(queryParams) {
         slideImg: ["/img/hotels/1.png"],
         delayAnimation: "2000",
       },
-    ];      
+      ];
       const response = [
         // Vehicle
         {
@@ -571,7 +577,7 @@ export function fetchproperties(queryParams) {
           slideImg: ["/img/hotels/1.png"],
           delayAnimation: "600",
         },
-      
+
         // Electronics
         {
           id: 7,
@@ -616,7 +622,7 @@ export function fetchproperties(queryParams) {
           numberOfViews: "76",
           slideImg: ["/img/hotels/1.png"],
           delayAnimation: "900",
-          url:""
+          url: ""
         },
         {
           id: 10,
@@ -708,7 +714,7 @@ export function fetchproperties(queryParams) {
           slideImg: ["/img/hotels/1.png"],
           delayAnimation: "1500",
         },
-      
+
         // Property
         {
           id: 16,
@@ -786,7 +792,7 @@ export function fetchproperties(queryParams) {
           delayAnimation: "2000",
         },
       ];
-      
+
     } catch (error) {
       dispatch(slice.actions.hasError(error));
     } finally {

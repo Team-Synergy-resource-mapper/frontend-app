@@ -13,11 +13,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // project import
 import { fetchproperties } from "../../store/reducers/data/propertyReducer";
 
-const Properties = () => {
+const Properties = ({subData, category}) => {
   // store state
   const dispatch = useDispatch();
   const { properties, isLoading } = useSelector((state) => state.property);
 
+
+  console.log("hkjkk", subData)
   // pre fetching data
   useEffect(() => {
     const queryParams = {
@@ -27,9 +29,11 @@ const Properties = () => {
       SortOrder: "asc",
       SearchKey: "",
       numberOfPages: 2,
+      category:category,
+      subCategory:subData
     };
     dispatch(fetchproperties(queryParams));
-  }, [dispatch]);
+  }, [dispatch, subData]);
 
   // constants
   const maxRating = 5;

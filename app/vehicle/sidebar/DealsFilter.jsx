@@ -3,17 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSubCategories } from "@/store/reducers/data/subCategoryReducer";
 import { useEffect, useState } from "react";
 import { selectSubCategory } from "@/store/reducers/data/subCategoryReducer";
-const DealsFilter = () => {
-  const propertyData = [
-  { id: 1, label: "room & annex", checked: false },
-  { id: 2, label: "land", checked: false },
-  { id: 3, label: "house", checked: false },
-  { id: 4, label: "commercial property", checked: false },
-  { id: 5, label: "apartment", checked: false }
-];
-
-
-  const [subData , setSubData] = useState(propertyData);
+const DealsFilter = ({subData, setSubData}) => {
+  
   // store
   const dispatch = useDispatch();
   const { subCategories, isLoading } = useSelector(

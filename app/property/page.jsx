@@ -1,3 +1,4 @@
+'use client'
 import CallToActions from "../../components/common/CallToActions";
 import Header10 from "../../components/header/header-10";
 import DefaultFooter from "../../components/footer/default";
@@ -7,12 +8,23 @@ import HotelProperties from "../../components/properties/Properties";
 import Pagination from "../../components/hotel-list/common/Pagination";
 import eSidebar from "../../components/properties/Sidebar";
 import Sidebar from "./sidebar/electronic_sidebar"
-export const metadata = {
-  title: "Hotel List v1 || GoTrip - Travel & Tour React NextJS Template",
-  description: "GoTrip - Travel & Tour React NextJS Template",
-};
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useState } from "react";
 
 const index = () => {
+
+  const propertyData = [
+    { id: 1, label: "room & annex", checked: false },
+    { id: 2, label: "land", checked: false },
+    { id: 3, label: "house", checked: false },
+    { id: 4, label: "commercial property", checked: false },
+    { id: 5, label: "apartment", checked: false }
+  ];
+
+  const [subData , setSubData] = useState(propertyData);
+
+
+
   return (
     <>
       {/* End Page Title */}
@@ -30,7 +42,7 @@ const index = () => {
           <div className="row y-gap-30">
             <div className="col-xl-3">
               <aside className="sidebar y-gap-40 xl:d-none">
-                <Sidebar />
+                <Sidebar setSubData={setSubData} subData={subData} />
               </aside>
               {/* End sidebar for desktop */}
 
@@ -54,7 +66,7 @@ const index = () => {
 
                 <div className="offcanvas-body">
                   <aside className="sidebar y-gap-40  xl:d-block">
-                    <Sidebar />
+                    <Sidebar setSubData={setSubData} subData={subData} />
                   </aside>
                 </div>
                 {/* End offcanvas body */}
@@ -68,7 +80,7 @@ const index = () => {
               <div className="mt-30"></div>
               {/* End mt--30 */}
               <div className="row y-gap-30">
-                <HotelProperties />
+                <HotelProperties  category={'property'}  subData={subData.find(item => item.checked)?.label} />
               </div>
               {/* End .row */}
               <Pagination />

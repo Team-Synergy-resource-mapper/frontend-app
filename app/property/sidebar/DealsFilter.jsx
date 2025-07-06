@@ -3,18 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSubCategories } from "@/store/reducers/data/subCategoryReducer";
 import { useEffect, useState } from "react";
 import { selectSubCategory } from "@/store/reducers/data/subCategoryReducer";
-const DealsFilter = () => {
-  const vehiclesData = [
-  { id: 1, label: "van", checked: false },
-  { id: 2, label: "three-wheeler", checked: false },
-  { id: 3, label: "lorry_truck", checked: false },
-  { id: 4, label: "car", checked: false },
-  { id: 5, label: "bike", checked: false },
-  { id: 6, label: "bicycle", checked: false }
-];
+const DealsFilter = ({subData, setSubData}) => {
+  
 
 
-  const [subData , setSubData] = useState(vehiclesData);
+  
   // store
   const dispatch = useDispatch();
   const { subCategories, isLoading } = useSelector(

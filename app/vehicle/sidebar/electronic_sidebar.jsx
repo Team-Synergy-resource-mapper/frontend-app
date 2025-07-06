@@ -3,7 +3,7 @@ import SearchBox from "./search_box";
 import CategoryFilter from "./electronic_category_filter";
 import DealsFilter from "./DealsFilter";
 
-const Sidebar = () => {
+const Sidebar = ({subData, setSubData}) => {
   return (
     <>
       <div className="sidebar__item -no-border">
@@ -26,7 +26,7 @@ const Sidebar = () => {
         <h5 className="text-18 fw-500 mb-10">Sub Categories</h5>
         <div className="sidebar-checkbox">
           <div className="row y-gap-5 items-center">
-            <DealsFilter />
+            <DealsFilter subData={subData} setSubData={setSubData}/>
           </div>
         </div>
       </div>

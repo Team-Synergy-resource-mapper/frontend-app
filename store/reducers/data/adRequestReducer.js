@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // project imports
-import { axiosServices } from "../../../utils/axios/axios";
+import { axiosServices, axiosMLService } from "../../../utils/axios/axios";
 import { dispatch } from '../../store';
 
 
@@ -106,7 +106,7 @@ export function addRequest(newrequest) {
     dispatch(slice.actions.startLoading());
 
     try {
-      const response = await axiosServices.post('advertisement', newrequest);
+      const response = await axiosMLService.post('ads/post_ad', newrequest);
       dispatch(slice.actions.addrequestSuccess(response.data));
     } catch (error) {
       dispatch(slice.actions.hasError(error));

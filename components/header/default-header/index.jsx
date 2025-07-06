@@ -69,7 +69,7 @@ const Header1 = () => {
                 {/* End language and currency selector */}
 
                 {/* Start btn-group */}
-                <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
+                {/* <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
                   <Link
                     href="/login"
                     className="button px-30 fw-400 text-14 -blue-1 bg-blue-1 h-50 text-white"
@@ -82,7 +82,7 @@ const Header1 = () => {
                   >
                     Sign In / Register
                   </Link>
-                </div>
+                </div> */}
                 {/* End btn-group */}
 
                 {/* Start mobile menu icon */}

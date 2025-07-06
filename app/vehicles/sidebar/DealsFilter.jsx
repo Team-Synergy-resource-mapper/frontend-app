@@ -4,18 +4,17 @@ import { fetchSubCategories } from "@/store/reducers/data/subCategoryReducer";
 import { useEffect, useState } from "react";
 import { selectSubCategory } from "@/store/reducers/data/subCategoryReducer";
 const DealsFilter = () => {
-  const electronicsData = [
-  { id: 1, label: "mobile phones & tablets", checked: false },
-  { id: 2, label: "mobile phone accessories", checked: false },
-  { id: 3, label: "electronic home appliances", checked: false },
-  { id: 4, label: "computers", checked: false },
-  { id: 5, label: "computer accessories", checked: false },
-  { id: 6, label: "cameras & camcorders", checked: false },
-  { id: 7, label: "audio & mp3", checked: false },
-  { id: 8, label: "air conditions & electrical fittings", checked: false }
+  const vehiclesData = [
+  { id: 1, label: "van", checked: false },
+  { id: 2, label: "three-wheeler", checked: false },
+  { id: 3, label: "lorry_truck", checked: false },
+  { id: 4, label: "car", checked: false },
+  { id: 5, label: "bike", checked: false },
+  { id: 6, label: "bicycle", checked: false }
 ];
 
-  const [subData , setSubData] = useState(electronicsData);
+
+  const [subData , setSubData] = useState(vehiclesData);
   // store
   const dispatch = useDispatch();
   const { subCategories, isLoading } = useSelector(

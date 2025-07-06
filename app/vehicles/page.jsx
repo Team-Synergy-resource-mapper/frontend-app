@@ -5,8 +5,8 @@ import MainFilterSearchBox from "../../components/hotel-list/hotel-list-v1/MainF
 import TopHeaderFilter from "../../components/hotel-list/hotel-list-v1/TopHeaderFilter";
 import HotelProperties from "../../components/properties/Properties";
 import Pagination from "../../components/hotel-list/common/Pagination";
-import Sidebar from "../../components/properties/Sidebar";
-
+import eSidebar from "../../components/properties/Sidebar";
+import Sidebar from "./sidebar/electronic_sidebar"
 export const metadata = {
   title: "Hotel List v1 || GoTrip - Travel & Tour React NextJS Template",
   description: "GoTrip - Travel & Tour React NextJS Template",

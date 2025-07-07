@@ -24,6 +24,8 @@ const index = () => {
   ];
 
   const [subData, setSubData] = useState(electronicsData);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [noPages, setNoPages] = useState(1);
   return (
     <>
       {/* End Page Title */}
@@ -79,10 +81,10 @@ const index = () => {
               <div className="mt-30"></div>
               {/* End mt--30 */}
               <div className="row y-gap-30">
-                <HotelProperties category={'electronics'} subData={subData.find(item => item.checked)?.label} />
+                <HotelProperties category={'electronics'} currentPage={currentPage} setNoPages={setNoPages} subData={subData.find(item => item.checked)?.label} />
               </div>
               {/* End .row */}
-              <Pagination />
+              <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={noPages}/>
             </div>
             {/* End .col for right content */}
           </div>
@@ -91,8 +93,6 @@ const index = () => {
         {/* End .container */}
       </section>
       {/* End layout for listing sidebar and content */}
-      hello
-      <img src="https://i.ikman-st.com/konka-43-inch-led-tv-full-hd-for-sale-colombo-1/80b309a1-59a0-4e1e-b339-7cd2e3e6e14c/620/466/fitted.jpg,https://i.ikman-st.com/konka-43-inch-led-tv-full-hd-for-sale-colombo-1/80b309a1-59a0-4e1e-b339-7cd2e3e6e14c/100/70/cropped.jpg" alt="TV Image"></img>
       <CallToActions />
       {/* End Call To Actions Section */}
 

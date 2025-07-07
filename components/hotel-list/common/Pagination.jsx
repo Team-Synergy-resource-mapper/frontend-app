@@ -3,8 +3,8 @@
 
 import { useState } from "react";
 
-const Pagination = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Pagination = ({totalPages,currentPage, setCurrentPage}) => {
+ 
 
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -24,7 +24,6 @@ const Pagination = () => {
   };
 
   const renderPages = () => {
-    const totalPages = 5; // Change this to the actual total number of pages
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
       pageNumbers.push(i);

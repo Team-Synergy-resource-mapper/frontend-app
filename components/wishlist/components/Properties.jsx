@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect,useState } from "react";
-import { fetchWishList } from "../../../store/reducers/data/wishlistReducer";
-import { axiosMLService } from "@/utils/axios/axios";
+import { deleteWish, fetchWishList } from "../../../store/reducers/data/wishlistReducer";
+import { axiosServices } from "@/utils/axios/axios";
 import { useRouter } from "next/navigation";
 
 
@@ -21,6 +21,10 @@ const Properties = () => {
     router.push(`/recoment-ads/${id}`);
     console.log(id)
     //axiosMLService.get("ddf",)
+  }
+
+  const handleDelete = (id)=>{
+      dispatch(deleteWish(id))
   }
 
   if (isLoading) {
@@ -86,7 +90,7 @@ const Properties = () => {
                     </button>
                   </div>
                   <div className="col-auto">
-                    <button className="flex-center bg-light-2 rounded-4 size-35">
+                    <button onClick={()=>handleDelete(item.id)} className="flex-center bg-light-2 rounded-4 size-35">
                       <i className="icon-trash-2 text-danger text-16 text-light-1" />
                     </button>
                   </div>

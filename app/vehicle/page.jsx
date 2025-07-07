@@ -22,7 +22,8 @@ const index = () => {
     { id: 6, label: "bicycle", checked: false }
   ];
 
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const [noPages, setNoPages] = useState(1);
   const [subData, setSubData] = useState(vehiclesData);
   return (
     <>
@@ -79,10 +80,10 @@ const index = () => {
               <div className="mt-30"></div>
               {/* End mt--30 */}
               <div className="row y-gap-30">
-                <HotelProperties category={'vehicle'} subData={subData.find(item => item.checked)?.label} />
+                <HotelProperties category={'vehicle'}currentPage={currentPage} setNoPages={setNoPages} subData={subData.find(item => item.checked)?.label} />
               </div>
               {/* End .row */}
-              <Pagination />
+              <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={noPages}/>
             </div>
             {/* End .col for right content */}
           </div>

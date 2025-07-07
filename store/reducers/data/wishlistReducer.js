@@ -79,7 +79,7 @@ const slice = createSlice({
       state.success = "wish deleted successfully."
     },
     setWishListuccess(state, action){
-      state.settedwish = action.payload 
+      state.settedwish = action.payload
     }
 
   }
@@ -495,7 +495,7 @@ export function deleteWish(wishId) {
     dispatch(slice.actions.startLoading());
 
     try {
-      await axiosServices.delete(`/wishList/${wishId}`);
+      await axiosServices.delete(`/ads/delete/${wishId}`);
       dispatch(slice.actions.deleteWishListuccess(wishId));
     } catch (error) {
       dispatch(slice.actions.hasError(error));

@@ -330,7 +330,7 @@ export const destinationsHome10 = [
     location: "Vehicles",
     properties: "4,090",
     delayAnim: "200",
-    link: "/vehicles",
+    link: "/vehicle",
   },
 ];
 

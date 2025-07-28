@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchRecomendList } from "../../../store/reducers/data/wishlistReducer";
 import { axiosMLService } from "@/utils/axios/axios";
-
+import Link from "next/link";
 const Properties = ({ id }) => {
   const dispatch = useDispatch();
   const { recomendList, isLoading } = useSelector(state => state.wishlist);
@@ -43,8 +43,8 @@ const Properties = ({ id }) => {
                         item.category === "vehicle"
                           ? "/category/vehicle.png"
                           : item.category === "property"
-                          ? "/category/house.png"
-                          : "/category/electronics.png"
+                            ? "/category/house.png"
+                            : "/category/electronics.png"
                       }
                       alt="image"
                     />
@@ -81,13 +81,26 @@ const Properties = ({ id }) => {
                       </div>
                     </div>
                     <div className="col-auto">
-                      <div className="flex-center text-white fw-600 text-14 size-40 rounded-4 bg-blue-1">
-                        {item?.ratings}
+                      <div className="col-md-auto text-right md:text-left">
+
+
+                        <Link
+                          href={item.url ?? '#'}
+                          className="button -md -dark-1 bg-blue-1 text-white mt-24"
+                        >
+                          See Availability
+                          <div className="icon-arrow-top-right ml-15"></div>
+                        </Link>
                       </div>
                     </div>
                   </div>
+
+
                 </div>
+
               </div>
+
+
             </div>
           </div>
         ))

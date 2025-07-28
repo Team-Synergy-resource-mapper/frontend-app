@@ -4,7 +4,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
-import SearchBoxContent from "../../hero/hero-8/SearchBoxContent";
 import MobileMenu from "../MobileMenu";
 
 const Header1 = () => {
@@ -90,12 +89,6 @@ const Header1 = () => {
                   >
                     Become An Expert
                   </Link>
-                  {/* <Link
-                    href="/signup"
-                    className="button px-30 fw-400 text-14 border-dark-1 -blue-1 h-50 text-dark-1 ml-20"
-                  >
-                    Sign In / Register
-                  </Link> */}
                 </div>
                 {/* End btn-group */}
 

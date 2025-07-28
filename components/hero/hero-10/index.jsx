@@ -1,4 +1,4 @@
-import FilterSelect from "./FilterSelect";
+
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const Index = () => {

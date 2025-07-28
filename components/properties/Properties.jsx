@@ -124,16 +124,6 @@ const Properties = ({ subData, category, setNoPages, currentPage }) => {
                     {item.category}
                   </span>
                 </div>
-
-                <div className="row x-gap-10 y-gap-10 items-center pt-10">
-                  <div className="col-auto">
-                    <p className="text-14">{item?.description}</p>
-                  </div>
-                  <div className="col-auto">
-                    <div className="size-3 rounded-full bg-light-1"></div>
-                  </div>
-                </div>
-
                 <div className="text-16 lh-18 mt-20">
                   <div
                     className="fw-700 uppercase"
@@ -150,11 +140,20 @@ const Properties = ({ subData, category, setNoPages, currentPage }) => {
                   </div>
                 </div>
 
+                <div className="row x-gap-10 y-gap-10 items-center pt-10">
+                  <div className="col-auto">
+                    <p className="text-14">{item?.description}</p>
+                  </div>
+                  <div className="col-auto">
+                    <div className="size-3 rounded-full bg-light-1"></div>
+                  </div>
+                </div>
+
               </div>
 
               {/* Pricing Section */}
               <div className="col-md-auto text-right md:text-left">
- 
+
 
                 <Link
                   href={item.url ?? '#'}

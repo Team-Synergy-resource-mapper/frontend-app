@@ -542,6 +542,7 @@ export function fetchRecomendList(queryParams) {
       function transformAdData(raw) {
             return {
               id: raw.id || 0,
+              url:raw.url,
               title: raw.title || "Untitled Advertisement",
               description: raw.description?.split('.')[0] || "No description available",
               category: raw.main_category || "General",
